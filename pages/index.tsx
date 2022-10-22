@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
-import { FlashCardList } from '../components'
+import { FlashCardList } from '../components/flashcard'
+import { Layout } from '../components/ui'
 import { IFlashCard } from '../interfaces'
 import styles from '../styles/HomePage.module.css'
 
@@ -42,7 +43,11 @@ const flashCards: IFlashCard[] = [
 ]
 
 const HomePage: NextPage = () => {
-  return <FlashCardList flashCards={flashCards} />
+  return (
+    <Layout title={'m-flashcards'}>
+      <FlashCardList flashCards={flashCards} />
+    </Layout>
+  )
 }
 
 export default HomePage

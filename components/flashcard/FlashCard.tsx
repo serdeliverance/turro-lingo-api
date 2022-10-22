@@ -1,6 +1,6 @@
 import { Card, Grid, Text } from '@nextui-org/react'
 import React, { FC } from 'react'
-import { IFlashCard } from '../interfaces'
+import { IFlashCard } from '../../interfaces'
 
 interface Props {
   flashCard: IFlashCard
