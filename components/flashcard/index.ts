@@ -1,2 +1,2 @@
-export * from './FlashCardList'
+export * from './FlashcardList'
 export * from './FlashCard'

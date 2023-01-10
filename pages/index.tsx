@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
-import { FlashCardList } from '../components/flashcard'
+import { FlashcardList } from '../components/flashcard'
 import { Layout } from '../components/ui'
+import { useFlashcardSet } from '../hooks'
 import { IFlashCard } from '../interfaces'
-import styles from '../styles/HomePage.module.css'
 
-const flashCards: IFlashCard[] = [
+const flashcards: IFlashCard[] = [
   {
     id: 1,
     front: 'Ich möchte ein Bier',
@@ -43,9 +43,11 @@ const flashCards: IFlashCard[] = [
 ]
 
 const HomePage: NextPage = () => {
+  const { flashcardSet, isLoading } = useFlashcardSet()
+
   return (
     <Layout title={'m-flashcards'}>
-      <FlashCardList flashCards={flashCards} />
+      <FlashcardList flashcards={flashcards} />
     </Layout>
   )
 }

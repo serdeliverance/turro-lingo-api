@@ -4,13 +4,13 @@ import { IFlashCard } from '../../interfaces'
 import { FlashCard } from './FlashCard'
 
 interface Props {
-  flashCards: IFlashCard[]
+  flashcards: IFlashCard[]
 }
 
-export const FlashCardList: FC<Props> = ({ flashCards }) => {
+export const FlashcardList: FC<Props> = ({ flashcards }) => {
   return (
     <Grid.Container gap={2}>
-      {flashCards.map((fc) => (
+      {flashcards.map((fc) => (
         <FlashCard key={fc.id} flashCard={fc} />
       ))}
     </Grid.Container>
