@@ -1,6 +1,6 @@
 # m-flashcards
 
-Flashcards for learning language phrases.
+Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Nextjs` and related technologies.
 
 ## Stack
 
@@ -17,7 +17,7 @@ yarn dev
 
 It runs the frontend on localhost:3000
 
-## Start local DB
+## Start DB
 
 run `docker-compose`:
 
