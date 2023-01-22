@@ -2,18 +2,19 @@ import type { NextPage } from 'next'
 import { FlashcardList } from '../components/flashcard'
 import { Layout } from '../components/ui'
 import { useFlashcardSet } from '../hooks'
-import { IFlashCard } from '../interfaces'
 
 const HomePage: NextPage = () => {
-  const { flashcardSet, isLoading } = useFlashcardSet()
+  const { flashcardSet, loading } = useFlashcardSet()
 
-  const { flashcards } = flashcardSet
+  const flashcards = flashcardSet?.flashcards || []
 
   return (
-    { flashcards && (<Layout title={'m-flashcards'}>
-    <FlashcardList flashcards={flashcards} />
-  </Layout>)}
-    
+    <>
+      {loading && <div>loading...</div>}
+      <Layout title={'m-flashcards'}>
+        <FlashcardList flashcards={flashcards} />
+      </Layout>
+    </>
   )
 }
 
