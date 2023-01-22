@@ -17,7 +17,7 @@ yarn dev
 
 It runs the frontend on localhost:3000
 
-## Start local DB
+## Start DB
 
 run `docker-compose`:
 
