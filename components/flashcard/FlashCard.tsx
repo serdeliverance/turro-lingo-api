@@ -9,6 +9,11 @@ interface Props {
 export const FlashCard: FC<Props> = ({ flashCard }) => {
   const [isFlipped, setIsFlipped] = useState(false)
 
+  const handleClick = () => {
+    setIsFlipped(true)
+    setTimeout(() => setIsFlipped(false), 6000)
+  }
+
   return (
     <Grid xs={6} sm={4}>
       {/* TODO add this color to theme or extract to constant */}
@@ -17,7 +22,7 @@ export const FlashCard: FC<Props> = ({ flashCard }) => {
           backgroundColor: !isFlipped ? '#0072F5' : '#17C964',
         }}
       >
-        <Card.Body onClick={() => setIsFlipped(!isFlipped)}>
+        <Card.Body onClick={handleClick}>
           <Text css={{ color: 'white' }}>
             {!isFlipped ? flashCard.front : flashCard.back}
           </Text>
