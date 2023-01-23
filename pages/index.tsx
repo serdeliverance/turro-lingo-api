@@ -6,12 +6,15 @@ import { useFlashcardSet } from '../hooks'
 const HomePage: NextPage = () => {
   const { flashcardSet, loading } = useFlashcardSet()
 
+  // TODO fix this nullable values handling (should not be optional)
   const flashcards = flashcardSet?.flashcards || []
+  const subject = flashcardSet?.subject
 
   return (
     <>
-      {loading && <div>loading...</div>}
       <Layout title={'m-flashcards'}>
+        {subject && <h1>{subject}</h1>}
+        {loading && <div>loading...</div>}
         <FlashcardList flashcards={flashcards} />
       </Layout>
     </>
