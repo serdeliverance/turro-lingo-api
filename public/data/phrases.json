@@ -158,5 +158,17 @@
     "front": "just a minute, please",
     "back": "Nur eine Minute bitte",
     "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "are you ready",
+    "back": "Bist du bereit?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I think Aleksandra is Jan's mother",
+    "back": "Ich denke, Aleksandra ist Jans Mutter",
+    "tags": ["social"]
   }
 ]
