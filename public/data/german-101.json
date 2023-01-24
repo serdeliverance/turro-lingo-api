@@ -218,5 +218,11 @@
     "front": "Maybe next time",
     "back": "Vielleicht beim nächsten Mal",
     "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I don't wanna work",
+    "back": "Ich habe keine lust",
+    "tags": ["social"]
   }
 ]
