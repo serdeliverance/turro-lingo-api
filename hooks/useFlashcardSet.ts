@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { IFlashCardSet } from '../interfaces'
 
+const DEFAULT_SET = 'german-101'
+
 export const useFlashcardSet = () => {
   const [flashcardSet, setFlashcardSet] = useState<IFlashCardSet | null>(null)
   const [error, setError] = useState(null)
@@ -9,7 +11,7 @@ export const useFlashcardSet = () => {
   useEffect(() => {
     setLoading(true)
     // TODO use await instead
-    fetch('data/phrases.json')
+    fetch(`data/${DEFAULT_SET}.json`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
