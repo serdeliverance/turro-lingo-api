@@ -212,5 +212,11 @@
     "front": "I need more time off",
     "back": "Ich brauche mehr Urlaub",
     "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Maybe next time",
+    "back": "Vielleicht beim nächsten Mal",
+    "tags": ["social"]
   }
 ]
