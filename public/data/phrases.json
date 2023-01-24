@@ -170,5 +170,23 @@
     "front": "I think Aleksandra is Jan's mother",
     "back": "Ich denke, Aleksandra ist Jans Mutter",
     "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I have no idea",
+    "back": "Keine Ahnung!",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Where do you live?",
+    "back": "Wo lebst du?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Do you work as Veterinarian?",
+    "back": "Arbeitest du nicht als Ärztin?",
+    "tags": ["social"]
   }
 ]

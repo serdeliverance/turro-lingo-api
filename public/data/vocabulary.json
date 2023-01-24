@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "front": "nochmal",
+    "back": "again",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "auch",
+    "back": "also",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "wer",
+    "back": "who",
+    "tags": ["social"]
+  }
+]
