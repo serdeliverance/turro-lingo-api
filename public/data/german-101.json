@@ -224,5 +224,17 @@
     "front": "I don't wanna work",
     "back": "Ich habe keine lust",
     "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "How was your Spanish class?",
+    "back": "TODO TODO TODO",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "How is your brother?",
+    "back": "TODO TODO TODO",
+    "tags": ["social"]
   }
 ]
