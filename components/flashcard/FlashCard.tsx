@@ -11,7 +11,7 @@ export const FlashCard: FC<Props> = ({ flashCard }) => {
 
   const handleClick = () => {
     setIsFlipped(true)
-    setTimeout(() => setIsFlipped(false), 6000)
+    setTimeout(() => setIsFlipped(false), 10000)
   }
 
   return (
