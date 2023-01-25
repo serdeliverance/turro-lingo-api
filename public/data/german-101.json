@@ -1,6 +1,18 @@
 [
   {
     "id": 1,
+    "front": "Can I do it later?",
+    "back": "Kann ich es später machen? ",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I don't really know how to do that",
+    "back": "Ich weiß wirklich nicht, wie ich das machen soll",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
     "front": "Let's go",
     "back": "Lass uns gehen",
     "tags": ["social"]

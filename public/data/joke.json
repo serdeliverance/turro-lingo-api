@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "front": "Can I do it later?",
+    "back": "Kann ich es später machen? ",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I don't really know how to do that",
+    "back": "Ich weiß wirklich nicht, wie ich das machen soll",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "It's my first day",
+    "back": "Ich bin mir nicht Sicher",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I need more time off",
+    "back": "Ich weiß wirklich nicht, wie ich das machen soll",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I don't wanna work",
+    "back": "Ich habe keine lust",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Can I get you something to drink?",
+    "back": "Kann ich dir etwas zu trinken anbienten?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I'm hungry",
+    "back": "Was hast du gestern gemacht?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Can't someone else do it?",
+    "back": "Was hast du gestern gemacht?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I'm sick",
+    "back": "Ich bin krank",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "let's go to the cinema",
+    "back": "Lass uns ins Kino gehen",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Where is the disco?",
+    "back": "Das ist nicht richtig",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I have no idea",
+    "back": "Keine Ahnung!",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I'm free tomorrow",
+    "back": "Ich bin morgen frei",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I'm sick'",
+    "back": "Ich brauche mehr Urlaub",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Maybe next time",
+    "back": "Vielleicht beim nächsten Mal",
+    "tags": ["social"]
+  }
+]
