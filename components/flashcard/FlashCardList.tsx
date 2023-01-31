@@ -1,7 +1,7 @@
-import { Grid } from '@nextui-org/react'
+import { Grid } from '@mui/material'
 import { FC } from 'react'
+import { Flashcard } from '.'
 import { IFlashCard } from '../../interfaces'
-import { FlashCard } from './FlashCard'
 
 interface Props {
   flashcards: IFlashCard[]
@@ -9,10 +9,10 @@ interface Props {
 
 export const FlashcardList: FC<Props> = ({ flashcards }) => {
   return (
-    <Grid.Container gap={2}>
+    <Grid container gap={2}>
       {flashcards.map((fc) => (
-        <FlashCard key={fc.id} flashCard={fc} />
+        <Flashcard key={fc.id} flashCard={fc} />
       ))}
-    </Grid.Container>
+    </Grid>
   )
 }

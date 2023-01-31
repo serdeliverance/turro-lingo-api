@@ -1,6 +1,7 @@
+import { Box, Grid } from '@mui/material'
 import type { NextPage } from 'next'
 import { FlashcardList } from '../components/flashcard'
-import { Layout } from '../components/ui'
+import { Layout, Navbar } from '../components/ui'
 import { useFlashcardSet } from '../hooks'
 
 const HomePage: NextPage = () => {
@@ -13,9 +14,11 @@ const HomePage: NextPage = () => {
   return (
     <>
       <Layout title={'m-flashcards'}>
-        {subject && <h1>{subject}</h1>}
-        {loading && <div>loading...</div>}
-        <FlashcardList flashcards={flashcards} />
+        <Grid container>
+          {subject && <h1>{subject}</h1>}
+          {loading && <div>loading...</div>}
+          <FlashcardList flashcards={flashcards} />
+        </Grid>
       </Layout>
     </>
   )

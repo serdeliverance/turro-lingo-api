@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { NextUIProvider } from '@nextui-org/react'
 import { SWRConfig } from 'swr'
+import { CssBaseline, ThemeProvider } from '@mui/material'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,9 +11,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           fetch(resource, init).then((res) => res.json()),
       }}
     >
-      <NextUIProvider>
-        <Component {...pageProps} />
-      </NextUIProvider>
+      <CssBaseline />
+      <Component {...pageProps} />
     </SWRConfig>
   )
 }
