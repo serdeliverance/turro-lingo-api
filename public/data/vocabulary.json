@@ -16,5 +16,12 @@
     "front": "wer",
     "back": "who",
     "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "überlebt",
+    "back": "survive / survived",
+    "ex": "Hast du den Tag überlebt?",
+    "tags": []
   }
 ]

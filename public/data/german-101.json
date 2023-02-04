@@ -1,12 +1,6 @@
 [
   {
     "id": 1,
-    "front": "Can I do it later?",
-    "back": "Kann ich es später machen? ",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
     "front": "I don't really know how to do that",
     "back": "Ich weiß wirklich nicht, wie ich das machen soll",
     "tags": ["social"]
@@ -19,21 +13,8 @@
   },
   {
     "id": 1,
-    "front": "I'm planning to go tomorrow",
-    "back": "Ich plane morgen zu gehen",
-    "tags": ["social"]
-  },
-
-  {
-    "id": 1,
     "front": "I'm not sure",
     "back": "Ich bin mir nicht Sicher",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "Can I get you something to drink?",
-    "back": "Kann ich dir etwas zu trinken anbienten?",
     "tags": ["social"]
   },
   {
@@ -46,18 +27,6 @@
     "id": 1,
     "front": "What did you do yesterday?",
     "back": "Was hast du gestern gemacht?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "What did you do yesterday?",
-    "back": "Was hast du gestern gemacht?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "What's that?",
-    "back": "Was ist das?",
     "tags": ["social"]
   },
   {
@@ -93,12 +62,6 @@
   },
   {
     "id": 1,
-    "front": "no le caes bien?",
-    "back": "Mach er dich nicht?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
     "front": "My friend is with Gianni",
     "back": "Die Mutter is bei dem Gianni",
     "tags": ["social"]
@@ -114,12 +77,6 @@
     "id": 1,
     "front": "Mir geht ist Heute sehr gut",
     "back": "I feel really good today",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "It was a good day",
-    "back": "Es war ein guter Tag",
     "tags": ["social"]
   },
   {
@@ -179,12 +136,6 @@
   },
   {
     "id": 1,
-    "front": "I think Aleksandra is Jan's mother",
-    "back": "Ich denke, Aleksandra ist Jans Mutter",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
     "front": "I have no idea",
     "back": "Keine Ahnung!",
     "tags": ["social"]
@@ -215,12 +166,6 @@
   },
   {
     "id": 1,
-    "front": "Are you available on that day?",
-    "back": "Sind sie an diesem Tag verfügbar?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
     "front": "I need more time off",
     "back": "Ich brauche mehr Urlaub",
     "tags": ["social"]
@@ -233,20 +178,14 @@
   },
   {
     "id": 1,
-    "front": "I don't wanna work",
-    "back": "Ich habe keine lust",
-    "tags": ["social"]
+    "front": "wahrscheinlich hast du recht",
+    "back": "You are probably right",
+    "tags": []
   },
   {
     "id": 1,
-    "front": "How was your Spanish class?",
-    "back": "TODO TODO TODO",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "How is your brother?",
-    "back": "TODO TODO TODO",
-    "tags": ["social"]
+    "front": "das ist egal",
+    "back": "It doesn't matter",
+    "tags": []
   }
 ]
