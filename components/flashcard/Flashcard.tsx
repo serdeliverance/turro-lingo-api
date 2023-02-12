@@ -1,4 +1,4 @@
-import { Grid, Paper } from '@mui/material'
+import { Grid, Paper, Typography, useTheme } from '@mui/material'
 import React, { FC, useState } from 'react'
 import { IFlashCard } from '../../interfaces'
 
@@ -7,6 +7,7 @@ interface Props {
 }
 
 export const Flashcard: FC<Props> = ({ flashCard }) => {
+  const theme = useTheme()
   const [isFlipped, setIsFlipped] = useState(false)
 
   const handleClick = () => {
@@ -21,12 +22,18 @@ export const Flashcard: FC<Props> = ({ flashCard }) => {
         onClick={handleClick}
         elevation={0}
         sx={{
-          bgcolor: !isFlipped ? '#0072F5' : '#17C964',
+          bgcolor: !isFlipped
+            ? theme.palette.primary.main
+            : theme.palette.success.main,
           height: 60,
+          borderRadius: '4px',
+          color: theme.palette.primary.contrastText,
           textAlign: 'center',
         }}
       >
-        {!isFlipped ? flashCard.front : flashCard.back}
+        <Typography variant="body1">
+          {!isFlipped ? flashCard.front : flashCard.back}
+        </Typography>
       </Paper>
     </Grid>
   )
