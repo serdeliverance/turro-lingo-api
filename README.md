@@ -1,6 +1,6 @@
 # m-flashcards
 
-Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Nextjs` and related technologies.
+Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Nextjs`, `Kotlin`, `Spring Webflux` and related technologies.
 
 ## Stack
 
