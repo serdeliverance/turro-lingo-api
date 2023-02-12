@@ -4,14 +4,28 @@ Flashcards for learning languages. This project born from a real need and also c
 
 ## Stack
 
-- `Nextjs`
-- `Typescript`
+- `Nextjs + Typescript`
+- `Kotlin + Spring Webflux`
+- `Cypress`
 - `Mongo`
 - `Docker`
 
-## Run app locally
+## Requirements
+
+- `NVM and Node v18.x`
+- `Java 17`
+- `Docker`
+
+## Run backend locally
 
 ```
+./gradlew bootRun
+```
+
+## Run frontend locally
+
+```
+cd ui
 yarn dev
 ```
 
