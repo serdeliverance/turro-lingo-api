@@ -1,7 +1,5 @@
-import { CssBaseline } from '@nextui-org/react'
 import Document, {
   DocumentContext,
-  DocumentInitialProps,
   Head,
   Html,
   Main,
@@ -21,7 +19,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{CssBaseline.flush()}</Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
