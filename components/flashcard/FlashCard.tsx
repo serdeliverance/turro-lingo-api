@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Grid, Paper, Typography } from '@mui/material'
+import { Grid, Paper } from '@mui/material'
 import React, { FC, useState } from 'react'
 import { IFlashCard } from '../../interfaces'
 
@@ -17,21 +17,17 @@ export const Flashcard: FC<Props> = ({ flashCard }) => {
   return (
     <Grid item xs={6} sm={4}>
       {/* TODO add this color to theme or extract to constant */}
-      <Box
+      <Paper
+        onClick={handleClick}
+        elevation={0}
         sx={{
           bgcolor: !isFlipped ? '#0072F5' : '#17C964',
-          height: 50,
+          height: 60,
           textAlign: 'center',
         }}
       >
-        <Paper
-          onClick={handleClick}
-          elevation={12}
-          sx={{ bgcolor: !isFlipped ? '#0072F5' : '#17C964' }}
-        >
-          {!isFlipped ? flashCard.front : flashCard.back}
-        </Paper>
-      </Box>
+        {!isFlipped ? flashCard.front : flashCard.back}
+      </Paper>
     </Grid>
   )
 }
