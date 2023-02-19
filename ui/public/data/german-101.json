@@ -1,191 +1,178 @@
 [
   {
     "id": 1,
-    "front": "I don't really know how to do that",
-    "back": "Ich weiß wirklich nicht, wie ich das machen soll",
+    "back": "I'm not sure",
+    "front": "Ich bin mir nicht Sicher",
     "tags": ["social"]
   },
   {
     "id": 1,
-    "front": "Let's go",
-    "back": "Lass uns gehen",
+    "back": "are you available tomorrow?",
+    "front": "Sind Sie morgen verfügbar?",
     "tags": ["social"]
   },
   {
     "id": 1,
-    "front": "I'm not sure",
-    "back": "Ich bin mir nicht Sicher",
+    "back": "What did you do yesterday?",
+    "front": "Was hast du gestern gemacht?",
     "tags": ["social"]
   },
   {
     "id": 1,
-    "front": "are you available tomorrow?",
-    "back": "Sind Sie morgen verfügbar?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "What did you do yesterday?",
-    "back": "Was hast du gestern gemacht?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "I'm sick",
-    "back": "Ich bin krank",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "let's go to the cinema",
-    "back": "Lass uns ins Kino gehen",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "that's not right",
-    "back": "Das ist nicht richtig",
-    "tags": ["social"]
-  },
-
-  {
-    "id": 1,
-    "front": "What do you like to do?",
-    "back": "Was möchten Sie tun?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "I can't see it",
-    "back": "Ich sehe es nicht",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "My friend is with Gianni",
-    "back": "Die Mutter is bei dem Gianni",
-    "tags": ["social"]
-  },
-
-  {
-    "id": 1,
-    "front": "Have a nice day",
-    "back": "Eine schöner Tag noch",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "I feel really good today",
-    "back": "Mir geht ist Heute sehr gut",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "I have to go",
-    "back": "Ich muss gehen",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "just a minute, please",
-    "back": "Nur eine Minute bitte",
-    "tags": ["social"]
-  },
-
-  {
-    "id": 1,
-    "front": "Why are you late?",
-    "back": "Warum bist du zu spät?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "Sorry for being late",
-    "back": "Es tut mir leid daß ist zu spät bin",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "Can we meet next week?",
-    "back": "Können wir uns nächste Woche treffen?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "How was your Journey?",
-    "back": "Wie war Ihre Reise?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "Have fun",
-    "back": "Viel Späß",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "just a minute, please",
-    "back": "Nur eine Minute bitte",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "are you ready",
-    "back": "Bist du bereit?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "I have no idea",
-    "back": "Keine Ahnung!",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "Where do you live?",
-    "back": "Wo lebst du?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "Do you work as Veterinarian?",
-    "back": "Arbeitest du nicht als Ärztin?",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "I'm planning to stay at home",
-    "back": "Ich habe vor, zu Hause zu bleiben",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "I'm free tomorrow",
-    "back": "Ich bin morgen frei",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "I need more time off",
-    "back": "Ich brauche mehr Urlaub",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "Maybe next time",
-    "back": "Vielleicht beim nächsten Mal",
-    "tags": ["social"]
-  },
-  {
-    "id": 1,
-    "front": "wahrscheinlich hast du recht",
-    "back": "You are probably right",
+    "back": "What are you doing there?",
+    "front": "was machst Du da?",
     "tags": []
   },
   {
     "id": 1,
-    "front": "das ist egal",
+    "back": "let's go to the cantine",
+    "front": "Lass uns die Cantine gehen",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "that's not right",
+    "front": "Das ist nicht richtig",
+    "tags": ["social"]
+  },
+
+  {
+    "id": 1,
+    "back": "What do you like to do?",
+    "front": "Was möchten Sie tun?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "I can't see it",
+    "front": "Ich sehe es nicht",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "My friend is with Gianni",
+    "front": "Die Mutter is bei dem Gianni",
+    "tags": ["social"]
+  },
+
+  {
+    "id": 1,
+    "back": "Have a nice day",
+    "front": "Eine schöner Tag noch",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "I feel really good today",
+    "front": "Mir geht ist Heute sehr gut",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "I have to go",
+    "front": "Ich muss gehen",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "Why are you late?",
+    "front": "Warum bist du zu spät?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "Sorry for being late",
+    "front": "Es tut mir leid daß ist zu spät bin",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "I have to go to the gym",
+    "front": "Ich muss ins Fitnessstudio",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "Can we meet next week?",
+    "front": "Können wir uns nächste Woche treffen?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "How was your Journey?",
+    "front": "Wie war Ihre Reise?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "Have fun",
+    "front": "Viel Späß",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "just a minute, please",
+    "front": "Nur eine Minute bitte",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "are you ready",
+    "front": "Bist du bereit?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "I have no idea",
+    "front": "Keine Ahnung!",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "Where do you live?",
+    "front": "Wo lebst du?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "Do you work as Veterinarian?",
+    "front": "Arbeitest du nicht als Ärztin?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "I'm planning to stay at home",
+    "front": "Ich habe vor, zu Hause zu bleiben",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "I'm free tomorrow",
+    "front": "Ich bin morgen frei",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "I need more time off",
+    "front": "Ich brauche mehr Urlaub",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "back": "wahrscheinlich hast du recht",
+    "front": "You are probably right",
+    "tags": []
+  },
+  {
+    "id": 1,
     "back": "It doesn't matter",
+    "front": "das ist egal",
+    "tags": []
+  },
+  {
+    "id": 1,
+    "back": "Keine Eile",
+    "front": "No rush (no hay apuro)",
     "tags": []
   }
 ]
