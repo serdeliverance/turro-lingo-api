@@ -12,7 +12,7 @@ Flashcards for learning languages. This project born from a real need and also c
 
 ## Requirements
 
-- `NVM and Node v18.x`
+- `Node v18.x` (you can use [NVM](https://github.com/nvm-sh/nvm) for setting the right version easily)
 - `Java 17`
 - `Docker`
 

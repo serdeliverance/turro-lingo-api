@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "front": "Let's go",
+    "back": "Lass uns gehen",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I'm planning to go tomorrow",
+    "back": "Ich plane morgen zu gehen",
+    "tags": ["social"]
+  },
+
+  {
+    "id": 1,
+    "front": "I'm not sure",
+    "back": "Ich bin mir nicht Sicher",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Can I get you something to drink?",
+    "back": "Kann ich dir etwas zu trinken anbienten?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "are you available tomorrow?",
+    "back": "Sind Sie morgen verfügbar?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "What did you do yesterday?",
+    "back": "Was hast du gestern gemacht?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "What did you do yesterday?",
+    "back": "Was hast du gestern gemacht?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "What's that?",
+    "back": "Was ist das?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I'm ill",
+    "back": "Ich bin krank",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "let's go to the cinema",
+    "back": "Lass uns ins Kino gehen",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "that's not right",
+    "back": "Das ist nicht richtig",
+    "tags": ["social"]
+  },
+
+  {
+    "id": 1,
+    "front": "What do you like to do?",
+    "back": "Was möchten Sie tun?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I can't see it",
+    "back": "Ich sehe es nicht",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "no le caes bien?",
+    "back": "Mach er dich nicht?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "My friend is with Gianni",
+    "back": "Die Mutter is bei dem Gianni",
+    "tags": ["social"]
+  },
+
+  {
+    "id": 1,
+    "front": "Have a nice day",
+    "back": "Eine schöner Tag noch",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Mir geht ist Heute sehr gut",
+    "back": "I feel really good today",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "It was a good day",
+    "back": "Es war ein guter Tag",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "I have to go",
+    "back": "Ich muss gehen",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "just a minute, please",
+    "back": "Nur eine Minute bitte",
+    "tags": ["social"]
+  },
+
+  {
+    "id": 1,
+    "front": "Why are you late?",
+    "back": "Warum bist du zu spät?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Sorry for being late",
+    "back": "Es tut mir leid daß ist zu spät bin",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Can we meet next week?",
+    "back": "Können wir uns nächste Woche treffen?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "How was your Journey?",
+    "back": "Wie war Ihre Reise?",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "Have fun",
+    "back": "Viel Späß",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "just a minute, please",
+    "back": "Nur eine Minute bitte",
+    "tags": ["social"]
+  },
+  {
+    "id": 1,
+    "front": "are you ready",
+    "back": "Bist du bereit?",
+    "tags": ["social"]
+  }
+]
