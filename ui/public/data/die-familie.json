@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": 1,
+    "front": "(die) Eltern",
+    "back": "fathers",
+    "tags": ["family"]
+  },
+  {
+    "id": 1,
+    "front": "(der) Bruder",
+    "back": "brother",
+    "tags": ["family"]
+  },
+  {
+    "id": 1,
+    "front": "(der) Onkel",
+    "back": "unkle",
+    "tags": ["family"]
+  },
+  {
+    "id": 1,
+    "front": "(die) Tante",
+    "back": "aunt",
+    "tags": ["family"]
+  }
+]
