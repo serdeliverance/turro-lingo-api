@@ -2,25 +2,21 @@
   {
     "id": 1,
     "front": "(die) Eltern",
-    "back": "fathers",
-    "tags": ["family"]
+    "back": "fathers"
   },
   {
     "id": 1,
     "front": "(der) Bruder",
-    "back": "brother",
-    "tags": ["family"]
+    "back": "brother"
   },
   {
     "id": 1,
     "front": "(der) Onkel",
-    "back": "unkle",
-    "tags": ["family"]
+    "back": "unkle"
   },
   {
     "id": 1,
     "front": "(die) Tante",
-    "back": "aunt",
-    "tags": ["family"]
+    "back": "aunt"
   }
 ]
