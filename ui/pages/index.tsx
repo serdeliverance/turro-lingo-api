@@ -1,19 +1,17 @@
 import { Box, Grid } from '@mui/material'
 import type { NextPage } from 'next'
 import { Layout } from '../components/ui'
-import { useFlashcardSet } from '../hooks'
-import { FlashcardSet } from '../components/flashcard'
+import { Menu } from '../components/menu'
+import { useMenuItems } from '../hooks'
 
 const HomePage: NextPage = () => {
-  const { flashcardSet, loading } = useFlashcardSet()
+  const { items } = useMenuItems()
 
   return (
     <>
       <Layout title={'m-flashcards'}>
-        <Grid container>
-          {loading && <div>loading...</div>}
-          {flashcardSet && <FlashcardSet flashcardSet={flashcardSet} />}
-        </Grid>
+        {/* TODO add spinner when loading == true*/}
+        <Menu items={items} />
       </Layout>
     </>
   )
