@@ -17,7 +17,6 @@ export const Flashcard: FC<Props> = ({ flashCard }) => {
 
   return (
     <Grid item xs={6} sm={4}>
-      {/* TODO add this color to theme or extract to constant */}
       <Paper
         onClick={handleClick}
         elevation={0}

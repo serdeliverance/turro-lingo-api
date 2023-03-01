@@ -1,10 +1,31 @@
 import { IMenuItem } from '../../interfaces'
-import { FC } from 'react'
+import React, { FC } from 'react'
+import {Grid, Paper, Typography, useTheme} from "@mui/material";
 
 interface Props {
   item: IMenuItem
 }
 
 export const MenuItem: FC<Props> = ({ item }) => {
-  return <h1>{item.name}</h1>
+
+  const theme = useTheme()
+
+  return (
+      <Grid item xs={12} sm={6}>
+          <Paper
+              elevation={0}
+              sx={{
+                  bgcolor: theme.palette.primary.main,
+                  height: 60,
+                  borderRadius: '4px',
+                  color: theme.palette.primary.contrastText,
+                  textAlign: 'center',
+              }}
+          >
+              <Typography variant="h4">
+                  {item.name}
+              </Typography>
+          </Paper>
+      </Grid>
+  )
 }
