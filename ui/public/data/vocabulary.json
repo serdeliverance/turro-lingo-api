@@ -18,10 +18,17 @@
     "tags": ["social"]
   },
   {
-    "id": 1,  
+    "id": 1,
     "front": "überlebt",
     "back": "survive / survived",
     "ex": "Hast du den Tag überlebt?",
+    "tags": []
+  },
+  {
+    "id": 1,
+    "front": "",
+    "back": "",
+    "ex": "Ich war unterwegs",
     "tags": []
   }
 ]
