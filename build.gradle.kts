@@ -42,7 +42,7 @@ tasks.withType<Test> {
 
 configure<com.diffplug.gradle.spotless.SpotlessExtension> {
     kotlin {
-        ktlint() // has its own section below
+        ktlint()
     }
     kotlinGradle {
         target("*.gradle.kts")
