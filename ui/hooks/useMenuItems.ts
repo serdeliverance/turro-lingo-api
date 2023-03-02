@@ -1,24 +1,20 @@
 import { IMenuItem } from '../interfaces'
-import {useEffect, useState} from "react";
+import useSWR from 'swr'
 
 export interface MenuItemsResponse {
   items: IMenuItem[]
+  error: string
   loading: boolean
 }
 
-// TODO implement
 export const useMenuItems = (): MenuItemsResponse => {
 
-  const [items, setItems] = useState<IMenuItem[]>([])
-
-  const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    setLoading(true)
-  }, [])
+  // TODO get host from env variable
+  const { data, error, isLoading } = useSWR('http://localhost:8080/api/menus')
 
   return {
-    items,
-    loading,
+    items: data,
+    error,
+    loading: isLoading,
   }
 }

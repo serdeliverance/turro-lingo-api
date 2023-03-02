@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class MFlashcardsBeApplication
 
 fun main(args: Array<String>) {
-	runApplication<MFlashcardsBeApplication>(*args)
+    runApplication<MFlashcardsBeApplication>(*args)
 }
