@@ -11,8 +11,12 @@ import reactor.core.publisher.Flux
 class MenuController {
 
     @GetMapping
-    fun getAll(): Flux<MenuItemDto> = Flux.fromArray(arrayOf(MenuItemDto("1", "german 101"),
-        MenuItemDto("2", "vocabulary"),
-        MenuItemDto("3", "sayings"),
-        MenuItemDto("4", "xxx")))
+    fun getAll(): Flux<MenuItemDto> = Flux.fromArray(
+        arrayOf(
+            MenuItemDto("1", "german 101"),
+            MenuItemDto("2", "vocabulary"),
+            MenuItemDto("3", "sayings"),
+            MenuItemDto("4", "xxx"),
+        ),
+    )
 }
