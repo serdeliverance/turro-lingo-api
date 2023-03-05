@@ -18,7 +18,7 @@ export const useFlashcardSet = () => {
           subject: 'German Phrases 101',
           language: 'German',
           flashcards: data,
-          tags: []
+          tags: [],
         })
         setLoading(false)
       })
