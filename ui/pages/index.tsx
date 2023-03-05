@@ -4,35 +4,10 @@ import { Layout } from '../components/ui'
 import { Menu } from '../components/menu'
 import { useMenuItems } from '../hooks'
 
-const items = [
-    {
-        id: 1,
-        name: 'german 101'
-    },
-    {
-        id: 2,
-        name: 'vocabulary'
-    },
-    {
-        id: 3,
-        name: 'sayings'
-    },
-    {
-        id: 4,
-        name: 'xxx'
-    },
-    {
-        id: 5,
-        name: 'xxx'
-    },
-    {
-        id: 6,
-        name: 'something'
-    }
-]
-
 const HomePage: NextPage = () => {
-  // const { items } = useMenuItems()
+  const { items, loading, error } = useMenuItems()
+
+    if (loading) return (<h1>Loading...</h1>)
 
   return (
     <>
