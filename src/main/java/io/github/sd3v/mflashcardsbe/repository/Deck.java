@@ -1,8 +1,7 @@
 package io.github.sd3v.mflashcardsbe.repository;
 
-import lombok.Data;
-
 import java.util.List;
+import lombok.Data;
 
 @Data
 public class Deck {
