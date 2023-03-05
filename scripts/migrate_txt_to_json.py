@@ -8,3 +8,7 @@ So, we can see that example section is optional (that why it is on [] ).
 
 Also, lines that starts with # are ignored. That is to allow you to make comments in the file.
 """
+def migrate_txt_to_json(source_path, deck_name, target_directory):
+    # TODO if destiny path is not specified, it targets to current directory
+    # TODO add explanation of different parameters in the python doc comment and in readme
+    pass
