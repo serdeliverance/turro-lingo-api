@@ -1,0 +1,38 @@
+# from 07/02
+gern | Enjoy to do
+woher | where... from
+aufschreiben | to write down
+Angst haben | Being afraid, being scared | TODO
+lieben | to love | TODO
+langweiling | boring
+briefmarke | poststamp
+Nachbar | (masc.) neighbour
+Nachbarin | (fem.) neighbour
+
+# A1.1 Module 3 | Kapitel 9
+der Apfel | apple
+Äpfel | apples
+der Braten | roast
+das Brötchen | bread roll/-s
+die Butter | Butter
+das Ei | egg
+Eier | eggs
+das Eis | ice cream
+der Fisch | fish
+Fische | fishes
+das Fleisch | meat
+der Käse | cheese
+die Kartoffel | potato
+die Kartoffeln | potatoes
+der Kuchen | cake-s
+das Stück Kuchen | a piece of cake
+die Milch | milk
+das Obst | fruits
+die Orange/-n | orange
+der Reis | rice
+die Sahne | cream
+der Salat/-e | salad/-s
+der Schinken | ham
+die Schokoladen | chocolate
+Schokoladen | chocolates
+// TODO finish
