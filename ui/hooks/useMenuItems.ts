@@ -9,7 +9,7 @@ export interface MenuItemsResponse {
 
 export const useMenuItems = (): MenuItemsResponse => {
 
-  // TODO get host from env variable
+  // TODO fix api backend to point to correct be port
   const { data, error, isLoading } = useSWR('http://localhost:8080/api/menus')
 
   return {
