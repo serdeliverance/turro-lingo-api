@@ -52,3 +52,7 @@ run `docker-compose`:
 ```
 docker-compose up
 ```
+
+## More info
+
+- [Useful scripts](./docs/scripts.md)
