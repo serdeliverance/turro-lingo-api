@@ -35,4 +35,3 @@ der Salat/-e | salad/-s
 der Schinken | ham
 die Schokoladen | chocolate
 Schokoladen | chocolates
-// TODO finish
