@@ -1,34 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# m-flashcards
 
-## Getting Started
+Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Java`, `Spring Webflux`, `Nextjs`, `Typescript` and related technologies.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
+- `Nextjs + Typescript`
+- `Java 17 + Spring Webflux`
+- `Cypress`
+- `Mongo`
+- `Docker`
+
+## Requirements
+
+- `Node v18.x` (you can use [NVM](https://github.com/nvm-sh/nvm) for setting the right version easily)
+- `Java 17`
+- `Docker`
+
+## Data model
+
+So far the model is very simple:
+
+```kotlin
+data class Deck(val name: String, val type: String, val tags: List<String>, val flashcards: List<Flashcard>)
+
+data class Flashcard(val front: String, val back: String, val example: String?)
+```
+
+We have `decks` and `flashcards`. A `deck` is a `flashcard` set with some metadata, such as `name` and `type`.
+`type` indicates with type of `flashcard` the `deck` stores. `type` could be `phrase` or `vocabulary`. `vocabulary` flashcards use to have `example` value set.
+`flaschcard` domain class is self-explanatory.
+
+## Run backend locally
+
+```
+./gradlew bootRun
+```
+
+## Run frontend locally
+
+```
+cd ui
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+It runs the frontend on localhost:3000
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Start DB
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+run `docker-compose`:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+docker-compose up
+```
 
-## Learn More
+## More info
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Useful scripts](./docs/scripts.md)
