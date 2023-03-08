@@ -1,11 +1,11 @@
 # m-flashcards
 
-Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Nextjs`, `Kotlin`, `Spring Webflux` and related technologies.
+Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Java`, `Spring Webflux`, `Nextjs`, `Typescript` and related technologies.
 
 ## Stack
 
 - `Nextjs + Typescript`
-- `Kotlin + Spring Webflux`
+- `Java 17 + Spring Webflux`
 - `Cypress`
 - `Mongo`
 - `Docker`
@@ -52,3 +52,7 @@ run `docker-compose`:
 ```
 docker-compose up
 ```
+
+## More info
+
+- [Useful scripts](./docs/scripts.md)

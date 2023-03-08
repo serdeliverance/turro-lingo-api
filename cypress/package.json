@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "format:test": "prettier --config ../ui/.prettierrc.js --list-different \"./**/*.{js,jsx,ts,tsx}\" || (echo \" \nProblem with code format. Please run yarn prettify:fix in cypress folder\" && exit 1)",
+    "format:fix": "prettier --config ../ui/.prettierrc.js --write \"./**/*.{js,jsx,ts,tsx}\""
+  },
+  "devDependencies": {
+    "prettier": "2.8.4"
+  }
+}
