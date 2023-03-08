@@ -46,12 +46,11 @@ def migrate_txt_to_json(file_path, target_directory, deck_name, deck_type = "phr
 
     deck = create_deck(deck_name, deck_type, language, flashcard_list)
 
-    json_obj = json.dumps(deck, indent=2)
     destiny_filename = get_destiny_filename(file_path)
     destiny_path = os.path.join(target_directory, destiny_filename)
 
-    with open(destiny_path, "w") as output_file:
-        output_file.write(json_obj)
+    with open(destiny_path, "w", encoding = "utf8") as output_file:
+        json.dump(deck, output_file, ensure_ascii = False, indent = 2)
 
 def get_destiny_filename(file_path):
     return f'{extract_file_name_with_extension(file_path)}.json'

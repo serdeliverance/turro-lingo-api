@@ -1,14 +1,3 @@
-# from 07/02
-gern | Enjoy to do
-woher | where... from
-aufschreiben | to write down
-Angst haben | Being afraid, being scared | TODO
-lieben | to love | TODO
-langweiling | boring
-briefmarke | poststamp
-Nachbar | (masc.) neighbour
-Nachbarin | (fem.) neighbour
-
 # A1.1 Module 3 | Kapitel 9
 der Apfel | apple
 Äpfel | apples
