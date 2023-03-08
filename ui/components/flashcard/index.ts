@@ -1,1 +1,1 @@
-export * from './FlashcardSet'
+export * from './Deck'
