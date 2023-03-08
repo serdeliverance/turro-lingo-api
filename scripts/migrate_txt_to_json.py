@@ -21,6 +21,16 @@ def migrate_txt_to_json(file_path, target_directory, deck_name, deck_type = "phr
     # TODO target_directory is optional, if not specified it targets to current directory
     # TODO add explanation of different parameters in the python doc comment and in readme
     # TODO validate file_path is .txt
+    deck = parse_txt(file_path, deck_name, deck_type)
+
+    destiny_filename = get_destiny_filename(file_path)
+    destiny_path = os.path.join(target_directory, destiny_filename)
+
+    with open(destiny_path, "w", encoding = "utf8") as output_file:
+        json.dump(deck, output_file, ensure_ascii = False, indent = 2)
+
+
+def parse_txt(file_path, deck_name, deck_type):
     if not file_path:
         # TODO improve this log message
         logger.info("please provide file path")
@@ -44,13 +54,7 @@ def migrate_txt_to_json(file_path, target_directory, deck_name, deck_type = "phr
     if len(flashcard_list) == 0:
         return
 
-    deck = create_deck(deck_name, deck_type, language, flashcard_list)
-
-    destiny_filename = get_destiny_filename(file_path)
-    destiny_path = os.path.join(target_directory, destiny_filename)
-
-    with open(destiny_path, "w", encoding = "utf8") as output_file:
-        json.dump(deck, output_file, ensure_ascii = False, indent = 2)
+    return create_deck(deck_name, deck_type, language, flashcard_list)
 
 def get_destiny_filename(file_path):
     return f'{extract_file_name_with_extension(file_path)}.json'
