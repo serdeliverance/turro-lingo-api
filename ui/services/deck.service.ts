@@ -3,7 +3,7 @@ import {IDeck} from "../interfaces";
 
 const getDeckBySlug = async (slug: string): Promise<IDeck | null> => {
         // TODO parameterize server host
-        const response = await axios.get<IDeck | null>(`http://localhost:8080/decks?slug=${slug}`)
+        const response = await axios.get<IDeck | null>(`http://localhost:8080/decks/slug/${slug}`)
         return response.data
 }
 
