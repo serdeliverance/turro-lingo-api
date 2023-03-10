@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { GetServerSideProps } from 'next'
+import DeckService from '../../services/deck.service'
 
 interface Props {}
 
@@ -9,9 +10,25 @@ const DeckPage: FC<Props> = () => {
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { slug = '' } = params as { slug: string }
-  // TODO implement
-  return {
-    props: {},
+
+  try {
+    const deck = await DeckService.getDeckBySlug(slug)
+
+    if (!deck) {
+      throw new Error('deck not found')
+    }
+
+    return {
+      props: { deck },
+    }
+  } catch (error) {
+    console.log(error)
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
   }
 }
 
