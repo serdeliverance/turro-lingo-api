@@ -15,9 +15,9 @@ public class MenuController {
   public Flux<MenuItemDto> getAll() {
     return Flux.fromIterable(
         List.of(
-            new MenuItemDto("1", "german 101"),
-            new MenuItemDto("2", "vocabulary"),
-            new MenuItemDto("3", "sayings"),
-            new MenuItemDto("4", "xxx")));
+            new MenuItemDto("1", "german 101", "german-101"),
+            new MenuItemDto("2", "vocabulary", "dummy"),
+            new MenuItemDto("3", "sayings", "sayings"),
+            new MenuItemDto("4", "xxx", "xxx")));
   }
 }

@@ -1,14 +1,14 @@
 import { FC } from 'react'
 import { GetServerSideProps } from 'next'
 import DeckService from '../../services/deck.service'
-import {IDeck} from "../../interfaces";
-import {Deck} from "../../components/flashcard";
+import { IDeck } from '../../interfaces'
+import { Deck } from '../../components/flashcard'
 
 interface Props {
   deck: IDeck
 }
 
-const DeckPage: FC<Props> = ({deck}) => {
+const DeckPage: FC<Props> = ({ deck }) => {
   return <Deck deck={deck} />
 }
 
