@@ -1,3 +1,3 @@
 export * from './IFlashCard'
-export * from './IFlashCardSet'
+export * from './IDeck'
 export * from './IMenuItem'

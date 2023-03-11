@@ -6,6 +6,7 @@ db.decks.insertMany(
     [
         {
             name: "german 101",
+            slug: "german-101",
             type: "phrases",
             language: "de_DE",
             tags: [],

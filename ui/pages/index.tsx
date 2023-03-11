@@ -5,9 +5,9 @@ import { Menu } from '../components/menu'
 import { useMenuItems } from '../hooks'
 
 const HomePage: NextPage = () => {
-  const { items, loading, error } = useMenuItems()
+  const { items, loading } = useMenuItems()
 
-    if (loading) return (<h1>Loading...</h1>)
+  if (loading) return <h1>Loading...</h1>
 
   return (
     <>
