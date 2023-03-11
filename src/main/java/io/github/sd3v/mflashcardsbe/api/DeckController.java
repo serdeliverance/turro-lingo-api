@@ -23,6 +23,7 @@ public class DeckController {
   public Mono<DeckDto> getBySlug(@PathVariable String slug) {
     return Mono.just(
         new DeckDto(
+            "German 101",
             slug,
             "something",
             "phrases",

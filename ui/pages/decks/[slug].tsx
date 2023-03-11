@@ -1,11 +1,15 @@
 import { FC } from 'react'
 import { GetServerSideProps } from 'next'
 import DeckService from '../../services/deck.service'
+import {IDeck} from "../../interfaces";
+import {Deck} from "../../components/flashcard";
 
-interface Props {}
+interface Props {
+  deck: IDeck
+}
 
-const DeckPage: FC<Props> = () => {
-  return <h1>DeckPage</h1>
+const DeckPage: FC<Props> = ({deck}) => {
+  return <Deck deck={deck} />
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {

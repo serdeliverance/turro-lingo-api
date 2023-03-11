@@ -4,6 +4,7 @@ import java.util.List;
 
 public record DeckDto(
     String name,
+    String slug,
     String description,
     String type,
     String language,
