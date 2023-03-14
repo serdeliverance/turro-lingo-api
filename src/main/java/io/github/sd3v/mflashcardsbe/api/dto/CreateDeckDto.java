@@ -2,8 +2,7 @@ package io.github.sd3v.mflashcardsbe.api.dto;
 
 import java.util.List;
 
-public record DeckDto(
-    String id,
+public record CreateDeckDto(
     String name,
     String slug,
     String description,
