@@ -18,4 +18,8 @@ public class DeckService {
   public Mono<Deck> create(CreateDeck deck) {
     return deckRepository.save(toEntity(deck)).mapNotNull(DeckMapper::toDomain);
   }
+
+  public Mono<Deck> getBySlug(String slug) {
+    return deckRepository.findFirstBySlug(slug).mapNotNull(DeckMapper::toDomain);
+  }
 }
