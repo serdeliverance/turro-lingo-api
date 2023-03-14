@@ -9,9 +9,6 @@ public class FlashcardMapper {
   }
 
   public static FlashcardDto toDto(Flashcard flashcard) {
-    return new FlashcardDto(
-        flashcard.id(),
-        flashcard.front(),
-        flashcard.back());
+    return new FlashcardDto(flashcard.id(), flashcard.front(), flashcard.back());
   }
 }

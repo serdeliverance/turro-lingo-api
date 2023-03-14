@@ -8,7 +8,6 @@ import io.github.sd3v.mflashcardsbe.api.dto.FlashcardDto;
 import io.github.sd3v.mflashcardsbe.api.helpers.DeckMapper;
 import io.github.sd3v.mflashcardsbe.service.DeckService;
 import java.util.List;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
@@ -18,7 +17,7 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class DeckController {
 
-  final private DeckService deckService;
+  private final DeckService deckService;
 
   @GetMapping("/{id}")
   public Mono<DeckDto> getById(@PathVariable String id) {
