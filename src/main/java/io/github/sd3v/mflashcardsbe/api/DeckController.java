@@ -4,10 +4,8 @@ import static io.github.sd3v.mflashcardsbe.api.helpers.DeckMapper.toDomain;
 
 import io.github.sd3v.mflashcardsbe.api.dto.CreateDeckDto;
 import io.github.sd3v.mflashcardsbe.api.dto.DeckDto;
-import io.github.sd3v.mflashcardsbe.api.dto.FlashcardDto;
 import io.github.sd3v.mflashcardsbe.api.helpers.DeckMapper;
 import io.github.sd3v.mflashcardsbe.service.DeckService;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
@@ -27,16 +25,7 @@ public class DeckController {
 
   @GetMapping("/slug/{slug}")
   public Mono<DeckDto> getBySlug(@PathVariable String slug) {
-    return Mono.just(
-        new DeckDto(
-            "1",
-            "German 101",
-            slug,
-            "something",
-            "phrases",
-            "de_DE",
-            List.of(new FlashcardDto(1, "Du bist eine Zitrone", "You are a lemon")),
-            List.of()));
+    return deckService.getBySlug(slug).map(DeckMapper::toDto);
   }
 
   @PostMapping("/")
