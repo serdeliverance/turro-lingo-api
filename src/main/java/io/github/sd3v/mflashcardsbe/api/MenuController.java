@@ -1,7 +1,6 @@
 package io.github.sd3v.mflashcardsbe.api;
 
 import io.github.sd3v.mflashcardsbe.api.dto.MenuItemDto;
-
 import io.github.sd3v.mflashcardsbe.api.helpers.MenuItemMapper;
 import io.github.sd3v.mflashcardsbe.service.DeckService;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +13,6 @@ import reactor.core.publisher.Flux;
 @RestController
 @RequestMapping("/menus")
 public class MenuController {
-
 
   private final DeckService deckService;
 
