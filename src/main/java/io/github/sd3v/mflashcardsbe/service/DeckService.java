@@ -2,6 +2,7 @@ package io.github.sd3v.mflashcardsbe.service;
 
 import static io.github.sd3v.mflashcardsbe.service.helpers.DeckMapper.toEntity;
 
+import io.github.sd3v.mflashcardsbe.api.dto.NewFlashcardDto;
 import io.github.sd3v.mflashcardsbe.domain.CreateDeck;
 import io.github.sd3v.mflashcardsbe.domain.Deck;
 import io.github.sd3v.mflashcardsbe.repository.DeckRepository;
@@ -27,5 +28,10 @@ public class DeckService {
 
   public Mono<Deck> getBySlug(String slug) {
     return deckRepository.findFirstBySlug(slug).mapNotNull(DeckMapper::toDomain);
+  }
+
+  public Mono<Void> addFlashcards(Integer deckId, NewFlashcardDto newFlashcardDto) {
+    // TODO implement
+    return null;
   }
 }
