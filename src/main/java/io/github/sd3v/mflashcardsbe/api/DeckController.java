@@ -4,6 +4,7 @@ import static io.github.sd3v.mflashcardsbe.api.helpers.DeckMapper.toDomain;
 
 import io.github.sd3v.mflashcardsbe.api.dto.CreateDeckDto;
 import io.github.sd3v.mflashcardsbe.api.dto.DeckDto;
+import io.github.sd3v.mflashcardsbe.api.dto.FlashcardDto;
 import io.github.sd3v.mflashcardsbe.api.dto.NewFlashcardDto;
 import io.github.sd3v.mflashcardsbe.api.helpers.DeckMapper;
 import io.github.sd3v.mflashcardsbe.service.DeckService;
@@ -36,5 +37,11 @@ public class DeckController {
   @PostMapping("/{id}/flashcards")
   public Mono<Void> addFlaschards(@PathVariable("id") Integer deckId, @RequestBody NewFlashcardDto newFlashcardDto) {
     return deckService.addFlashcards(deckId, newFlashcardDto);
+  }
+
+  @DeleteMapping("/{deckId}/flashcards/{flashcardId}")
+  public Mono<FlashcardDto> deleteFlashcard(@PathVariable ("deckId") Integer deckId, @PathVariable("flashcardId") String flashcardId) {
+    // TODO implement
+    return null;
   }
 }
