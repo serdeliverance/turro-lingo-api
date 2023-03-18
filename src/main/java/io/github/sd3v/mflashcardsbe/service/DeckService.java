@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.publisher.Signal;
 
 @Service
 @RequiredArgsConstructor
@@ -31,6 +32,11 @@ public class DeckService {
   }
 
   public Mono<Void> addFlashcards(Integer deckId, NewFlashcardDto newFlashcardDto) {
+    // TODO implement
+    return null;
+  }
+
+  public Mono<Deck> update(Deck deck) {
     // TODO implement
     return null;
   }
