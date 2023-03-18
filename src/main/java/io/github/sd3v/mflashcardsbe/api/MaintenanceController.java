@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/maintenance")
 public class MaintenanceController {
 
-    private final MaintenanceService maintenanceService;
+  private final MaintenanceService maintenanceService;
 
-    @PostMapping("/addIdToFlashcards")
-    public void addIdToFlashcards() {
-        maintenanceService.addIdToFlashcards();
-    }
+  @PostMapping("/addIdToFlashcards")
+  public void addIdToFlashcards() {
+    maintenanceService.addIdToFlashcards();
+  }
 }

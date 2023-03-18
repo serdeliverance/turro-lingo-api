@@ -29,18 +29,21 @@ public class DeckController {
   public Mono<DeckDto> getBySlug(@PathVariable String slug) {
     return deckService.getBySlug(slug).map(DeckMapper::toDto);
   }
+
   @PostMapping("/")
   public Mono<DeckDto> create(@RequestBody CreateDeckDto createDeckDto) {
     return deckService.create(toDomain(createDeckDto)).map(DeckMapper::toDto);
   }
 
   @PostMapping("/{id}/flashcards")
-  public Mono<Void> addFlaschards(@PathVariable("id") Integer deckId, @RequestBody NewFlashcardDto newFlashcardDto) {
+  public Mono<Void> addFlaschards(
+      @PathVariable("id") Integer deckId, @RequestBody NewFlashcardDto newFlashcardDto) {
     return deckService.addFlashcards(deckId, newFlashcardDto);
   }
 
   @DeleteMapping("/{deckId}/flashcards/{flashcardId}")
-  public Mono<FlashcardDto> deleteFlashcard(@PathVariable ("deckId") Integer deckId, @PathVariable("flashcardId") String flashcardId) {
+  public Mono<FlashcardDto> deleteFlashcard(
+      @PathVariable("deckId") Integer deckId, @PathVariable("flashcardId") String flashcardId) {
     // TODO implement
     return null;
   }
