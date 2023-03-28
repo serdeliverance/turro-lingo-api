@@ -18,7 +18,6 @@ public class DeckService {
   private final DeckRepository deckRepository;
 
   public List<Deck> getAll() {
-    // TODO check map vs mapNotNull for this case
     return deckRepository.findAll().stream().map(DeckMapper::toDomain).toList();
   }
 
