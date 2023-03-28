@@ -31,12 +31,11 @@ public class DeckService {
     return deckRepository.findFirstBySlug(slug).map(DeckMapper::toDomain);
   }
 
-  public Mono<Void> addFlashcards(Integer deckId, NewFlashcardDto newFlashcardDto) {
+  public void addFlashcards(Integer deckId, NewFlashcardDto newFlashcardDto) {
     // TODO implement
-    return null;
   }
 
-  public Mono<Deck> update(Deck deck) {
+  public Deck update(Deck deck) {
     // TODO implement
     return null;
   }

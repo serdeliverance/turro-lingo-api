@@ -13,8 +13,7 @@ public class MaintenanceService {
   private final DeckService deckService;
 
   public void addIdToFlashcards() {
-    deckService
-        .getAll()
+    deckService.getAll().stream()
         .filter(deck -> deck.name().equals("example")) // just for development, delete later
         .map(
             deck -> {
@@ -32,7 +31,6 @@ public class MaintenanceService {
                   flashcards,
                   deck.tags());
             })
-        .flatMap(deckService::update)
-        .subscribe();
+        .forEach(deckService::update);
   }
 }
