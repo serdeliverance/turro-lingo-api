@@ -2,10 +2,10 @@ package io.github.sd3v.mflashcardsbe;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
-@EnableReactiveMongoRepositories
+@EnableMongoRepositories
 public class MFlashcardsBeApplication {
 
   public static void main(String[] args) {
