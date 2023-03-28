@@ -1,11 +1,11 @@
 # m-flashcards
 
-Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Java`, `Spring Webflux`, `Nextjs`, `Typescript` and related technologies.
+Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Java`, `Spring Boot`, `Nextjs`, `Typescript` and related technologies.
 
 ## Stack
 
 - `Nextjs + Typescript`
-- `Java 17 + Spring Webflux`
+- `Java 17 + Spring Boot`
 - `Cypress`
 - `Mongo`
 - `Docker`
