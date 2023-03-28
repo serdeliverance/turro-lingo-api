@@ -19,6 +19,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("org.flywaydb:flyway-core:9.16.0")
     runtimeOnly("org.postgresql:postgresql:42.5.4")
     runtimeOnly ("org.postgresql:r2dbc-postgresql")
     compileOnly("org.projectlombok:lombok")
