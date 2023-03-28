@@ -7,7 +7,7 @@ Flashcards for learning languages. This project born from a real need and also c
 - `Nextjs + Typescript`
 - `Java 17 + Spring Boot`
 - `Cypress`
-- `Mongo`
+- `Postgres`
 - `Docker`
 
 ## Requirements
