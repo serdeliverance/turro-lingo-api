@@ -9,7 +9,6 @@ services:
     volumes:
       - ./docker/mongo/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
       - ./docker/mongo/data:/data/db
-      -
 
   mfc-postgres:
     image: postgres:latest
