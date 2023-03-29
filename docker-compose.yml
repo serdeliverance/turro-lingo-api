@@ -16,6 +16,6 @@ services:
       - "TZ=Europe/Amsterdam"
       - "POSTGRES_USER=root"
       - "POSTGRES_PASSWORD=root"
-      - "POSTGRES_DB=mfc"
+      - "POSTGRES_DB=mfcdb"
     ports:
       - 45432:5432
