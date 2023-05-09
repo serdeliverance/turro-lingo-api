@@ -12,5 +12,4 @@ public record DeckEntity(
     String description,
     String type,
     String language,
-    List<FlashcardEntity> flashcards,
-    List<String> tags) {}
+    String tags) {}

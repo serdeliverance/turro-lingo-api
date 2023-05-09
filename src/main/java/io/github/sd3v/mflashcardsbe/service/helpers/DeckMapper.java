@@ -4,6 +4,9 @@ import io.github.sd3v.mflashcardsbe.domain.CreateDeck;
 import io.github.sd3v.mflashcardsbe.domain.Deck;
 import io.github.sd3v.mflashcardsbe.repository.entity.DeckEntity;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class DeckMapper {
 
   public static DeckEntity toEntity(CreateDeck deck) {
@@ -14,8 +17,7 @@ public class DeckMapper {
         deck.description(),
         deck.type(),
         deck.language(),
-        deck.flashcards().stream().map(FlashcardMapper::toEntity).toList(),
-        deck.tags());
+        deck.tags().stream().collect(Collectors.joining(",")));
   }
 
   public static Deck toDomain(DeckEntity entity) {
@@ -26,7 +28,7 @@ public class DeckMapper {
         entity.description(),
         entity.type(),
         entity.language(),
-        entity.flashcards().stream().map(FlashcardMapper::toDomain).toList(),
-        entity.tags());
+        null,
+        Arrays.stream(entity.tags().split(",")).toList());
   }
 }

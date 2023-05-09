@@ -1,3 +1,5 @@
 package io.github.sd3v.mflashcardsbe.repository.entity;
 
-public record FlashcardEntity(Integer id, String front, String back) {}
+import org.springframework.data.annotation.Id;
+
+public record FlashcardEntity(@Id Integer id, String front, String back, Integer deckId) {}
