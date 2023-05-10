@@ -5,10 +5,11 @@ import io.github.sd3v.mflashcardsbe.repository.entity.FlashcardEntity;
 
 public class FlashcardMapper {
   public static FlashcardEntity toEntity(Flashcard domain) {
-    return new FlashcardEntity(Integer.valueOf(domain.id()), domain.front(), domain.back());
+    // FIXME passing null here
+    return new FlashcardEntity(domain.id(), domain.front(), domain.back(), null);
   }
 
   public static Flashcard toDomain(FlashcardEntity entity) {
-    return new Flashcard(String.valueOf(entity.id()), entity.front(), entity.back());
+    return new Flashcard(entity.id(), entity.front(), entity.back());
   }
 }

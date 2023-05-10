@@ -2,7 +2,6 @@ package io.github.sd3v.mflashcardsbe.service;
 
 import io.github.sd3v.mflashcardsbe.domain.Deck;
 import io.github.sd3v.mflashcardsbe.domain.Flashcard;
-import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +18,7 @@ public class MaintenanceService {
             deck -> {
               var flashcards =
                   deck.flashcards().stream()
-                      .map(f -> new Flashcard(UUID.randomUUID().toString(), f.front(), f.back()))
+                      .map(f -> new Flashcard(1l, f.front(), f.back()))
                       .toList();
               return new Deck(
                   deck.id(),

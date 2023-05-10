@@ -5,10 +5,10 @@ import io.github.sd3v.mflashcardsbe.domain.Flashcard;
 
 public class FlashcardMapper {
   public static Flashcard toDomain(FlashcardDto dto) {
-    return new Flashcard(String.valueOf(dto.id()), dto.front(), dto.back());
+    return new Flashcard(dto.id(), dto.front(), dto.back());
   }
 
   public static FlashcardDto toDto(Flashcard flashcard) {
-    return new FlashcardDto(Integer.valueOf(flashcard.id()), flashcard.front(), flashcard.back());
+    return new FlashcardDto(flashcard.id(), flashcard.front(), flashcard.back());
   }
 }

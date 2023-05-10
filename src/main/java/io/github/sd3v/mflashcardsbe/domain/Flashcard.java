@@ -1,3 +1,3 @@
 package io.github.sd3v.mflashcardsbe.domain;
 
-public record Flashcard(String id, String front, String back) {}
+public record Flashcard(Long id, String front, String back) {}
