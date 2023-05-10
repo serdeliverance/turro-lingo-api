@@ -8,6 +8,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.0"
     id("com.diffplug.spotless") version "6.16.0"
     id("nu.studer.jooq") version "5.2.1"
+    id("org.flywaydb.flyway") version "9.8.1"
 }
 
 group = "io.github.sd3v"
@@ -25,7 +26,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.jooq:jooq:3.18.0")
-    implementation("org.flywaydb:flyway-core:9.16.0")
     jooqGenerator("org.postgresql:postgresql:42.5.4")
     runtimeOnly("org.postgresql:postgresql:42.5.4")
     compileOnly("org.projectlombok:lombok")
@@ -55,6 +55,15 @@ spotless {
     }
 }
 
+// TODO fix flyway migrations doesn't run on startup
+flyway {
+    url = "jdbc:postgresql://localhost:45432/mfcdb"
+    user = "root"
+    password = "root"
+    baselineVersion = "0"
+    validateMigrationNaming = true
+}
+
 jooq {
     version.set(jooqVersion)
     edition.set(JooqEdition.OSS)
@@ -67,7 +76,7 @@ jooq {
                 logging = org.jooq.meta.jaxb.Logging.WARN
                 jdbc.apply {
                     driver = "org.postgresql.Driver"
-                    url = "jdbc:postgresql://localhost:45433/mfc"
+                    url = "jdbc:postgresql://localhost:45432/mfcdb"
                     user = "root"
                     password = "root"
                     properties.add(Property().withKey("PAGE_SIZE").withValue("2048"))
