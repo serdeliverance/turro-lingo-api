@@ -1,9 +1,11 @@
 import nu.studer.gradle.jooq.JooqEdition
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jooq.meta.jaxb.ForcedType
 import org.jooq.meta.jaxb.Property
 
 plugins {
-    id("java")
+    kotlin("jvm") version "1.7.22"
+    kotlin("plugin.spring") version "1.7.22"
     id("org.springframework.boot") version "3.0.2"
     id("io.spring.dependency-management") version "1.1.0"
     id("com.diffplug.spotless") version "6.16.0"
@@ -25,12 +27,23 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.jooq:jooq:3.18.0")
     jooqGenerator("org.postgresql:postgresql:42.5.4")
     runtimeOnly("org.postgresql:postgresql:42.5.4")
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        freeCompilerArgs = listOf("-Xjsr305=strict")
+        jvmTarget = "17"
+    }
 }
 
 tasks.withType<Test> {
@@ -45,11 +58,20 @@ sourceSets {
 }
 
 spotless {
+    kotlin {
+        ktlint()
+    }
+    kotlinGradle {
+        target("*.gradle.kts")
+        ktlint()
+    }
     java {
-        target(fileTree(rootDir) {
-            include("src/**/*.java")
-            exclude("src/jooq")
-        })
+        target(
+            fileTree(rootDir) {
+                include("src/**/*.java")
+                exclude("src/jooq")
+            },
+        )
         removeUnusedImports()
         googleJavaFormat("1.15.0")
     }
@@ -95,8 +117,8 @@ jooq {
                                 ForcedType()
                                     .withName("varchar")
                                     .withIncludeExpression(".*")
-                                    .withIncludeTypes("INET")
-                            ).toList()
+                                    .withIncludeTypes("INET"),
+                            ).toList(),
                         )
                         excludes = "QRTZ_.*"
                     }
