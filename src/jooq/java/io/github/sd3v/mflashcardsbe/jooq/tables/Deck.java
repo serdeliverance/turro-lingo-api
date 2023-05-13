@@ -12,12 +12,12 @@ import java.util.function.Function;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function6;
+import org.jooq.Function7;
 import org.jooq.Identity;
 import org.jooq.Name;
 import org.jooq.Record;
 import org.jooq.Records;
-import org.jooq.Row6;
+import org.jooq.Row7;
 import org.jooq.Schema;
 import org.jooq.SelectField;
 import org.jooq.Table;
@@ -71,6 +71,11 @@ public class Deck extends TableImpl<DeckRecord> {
     public final TableField<DeckRecord, String> TYPE = createField(DSL.name("type"), SQLDataType.VARCHAR(50).nullable(false), this, "");
 
     /**
+     * The column <code>public.deck.description</code>.
+     */
+    public final TableField<DeckRecord, String> DESCRIPTION = createField(DSL.name("description"), SQLDataType.VARCHAR(255), this, "");
+
+    /**
      * The column <code>public.deck.language</code>.
      */
     public final TableField<DeckRecord, String> LANGUAGE = createField(DSL.name("language"), SQLDataType.VARCHAR(20).nullable(false), this, "");
@@ -78,7 +83,7 @@ public class Deck extends TableImpl<DeckRecord> {
     /**
      * The column <code>public.deck.tags</code>.
      */
-    public final TableField<DeckRecord, String> TAGS = createField(DSL.name("tags"), SQLDataType.VARCHAR, this, "");
+    public final TableField<DeckRecord, String> TAGS = createField(DSL.name("tags"), SQLDataType.VARCHAR(255), this, "");
 
     private Deck(Name alias, Table<DeckRecord> aliased) {
         this(alias, aliased, null);
@@ -168,18 +173,18 @@ public class Deck extends TableImpl<DeckRecord> {
     }
 
     // -------------------------------------------------------------------------
-    // Row6 type methods
+    // Row7 type methods
     // -------------------------------------------------------------------------
 
     @Override
-    public Row6<Long, String, String, String, String, String> fieldsRow() {
-        return (Row6) super.fieldsRow();
+    public Row7<Long, String, String, String, String, String, String> fieldsRow() {
+        return (Row7) super.fieldsRow();
     }
 
     /**
      * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
      */
-    public <U> SelectField<U> mapping(Function6<? super Long, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
+    public <U> SelectField<U> mapping(Function7<? super Long, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
@@ -187,7 +192,7 @@ public class Deck extends TableImpl<DeckRecord> {
      * Convenience mapping calling {@link SelectField#convertFrom(Class,
      * Function)}.
      */
-    public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Long, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
+    public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }
 }

@@ -6,8 +6,8 @@ import io.github.sd3v.mflashcardsbe.domain.Deck
 import io.github.sd3v.mflashcardsbe.repository.DeckRepository
 import io.github.sd3v.mflashcardsbe.service.helpers.DeckMapper
 import io.github.sd3v.mflashcardsbe.service.helpers.DeckMapper.toDomain
-import io.github.sd3v.mflashcardsbe.service.helpers.DeckMapper.toEntity
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Service
 class DeckService(val deckRepository: DeckRepository) {
@@ -16,8 +16,9 @@ class DeckService(val deckRepository: DeckRepository) {
         return deckRepository.findAll().map(DeckMapper::toDomain)
     }
 
+    @Transactional
     fun create(deck: CreateDeck): Deck {
-        val deckEntity = deckRepository.save(toEntity(deck))
+        val deckEntity = deckRepository.save(deck)
         return toDomain(deckEntity)
     }
 

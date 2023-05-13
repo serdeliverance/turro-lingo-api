@@ -1,5 +1,6 @@
 package io.github.sd3v.mflashcardsbe.repository
 
+import io.github.sd3v.mflashcardsbe.domain.CreateDeck
 import io.github.sd3v.mflashcardsbe.repository.entity.DeckEntity
 
 interface DeckRepository {
@@ -7,5 +8,5 @@ interface DeckRepository {
 
     fun findAll(): List<DeckEntity>
 
-    fun save(deck: DeckEntity): DeckEntity
+    fun save(deck: CreateDeck): DeckEntity
 }

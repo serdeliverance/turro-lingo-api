@@ -19,6 +19,7 @@ public class Deck implements Serializable {
     private final String name;
     private final String slug;
     private final String type;
+    private final String description;
     private final String language;
     private final String tags;
 
@@ -27,6 +28,7 @@ public class Deck implements Serializable {
         this.name = value.name;
         this.slug = value.slug;
         this.type = value.type;
+        this.description = value.description;
         this.language = value.language;
         this.tags = value.tags;
     }
@@ -36,6 +38,7 @@ public class Deck implements Serializable {
         String name,
         String slug,
         String type,
+        String description,
         String language,
         String tags
     ) {
@@ -43,6 +46,7 @@ public class Deck implements Serializable {
         this.name = name;
         this.slug = slug;
         this.type = type;
+        this.description = description;
         this.language = language;
         this.tags = tags;
     }
@@ -76,6 +80,13 @@ public class Deck implements Serializable {
     }
 
     /**
+     * Getter for <code>public.deck.description</code>.
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * Getter for <code>public.deck.language</code>.
      */
     public String getLanguage() {
@@ -97,6 +108,7 @@ public class Deck implements Serializable {
         sb.append(", ").append(name);
         sb.append(", ").append(slug);
         sb.append(", ").append(type);
+        sb.append(", ").append(description);
         sb.append(", ").append(language);
         sb.append(", ").append(tags);
 

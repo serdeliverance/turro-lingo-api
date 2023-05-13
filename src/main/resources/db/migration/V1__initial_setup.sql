@@ -5,8 +5,9 @@ CREATE TABLE IF NOT EXISTS "deck"(
     "name" VARCHAR(255) NOT NULL,
     "slug" VARCHAR(255) NOT NULL,
     "type" VARCHAR(50) NOT NULL,
+    "description" VARCHAR(255),
     "language" VARCHAR(20) NOT NULL,
-    "tags" jsonb
+    "tags" VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS "flashcard";
