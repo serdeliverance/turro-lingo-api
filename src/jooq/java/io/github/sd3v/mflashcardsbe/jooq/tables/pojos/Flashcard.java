@@ -19,7 +19,7 @@ public class Flashcard implements Serializable {
     private final String front;
     private final String back;
     private final String example;
-    private final Integer deckId;
+    private final Long deckId;
 
     public Flashcard(Flashcard value) {
         this.id = value.id;
@@ -34,7 +34,7 @@ public class Flashcard implements Serializable {
         String front,
         String back,
         String example,
-        Integer deckId
+        Long deckId
     ) {
         this.id = id;
         this.front = front;
@@ -74,7 +74,7 @@ public class Flashcard implements Serializable {
     /**
      * Getter for <code>public.flashcard.deck_id</code>.
      */
-    public Integer getDeckId() {
+    public Long getDeckId() {
         return this.deckId;
     }
 

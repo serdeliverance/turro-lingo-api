@@ -1,6 +1,6 @@
 package io.github.sd3v.mflashcardsbe.repository
 
-import io.github.sd3v.mflashcardsbe.io.github.sd3v.mflashcardsbe.repository.entity.DeckEntity
+import io.github.sd3v.mflashcardsbe.repository.entity.DeckEntity
 import org.springframework.stereotype.Repository
 
 @Repository

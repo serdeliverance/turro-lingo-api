@@ -15,13 +15,13 @@ class FlashcardRepositoryImpl : FlashcardRepository {
     private val conn: Connection? = null
     private val ctx = DSL.using(conn, SQLDialect.POSTGRES)
     override fun findById(id: Long): FlashcardEntity? =
-      ctx.select().from(FLASHCARD)
-          .where(FLASHCARD.ID.equal(id))
-          .fetchOne()
-          ?.into(Flashcard::class.java)
-          ?.let { FlashcardEntity(it.id, it.front, it.back, it.deckId) }
+        ctx.select().from(FLASHCARD)
+            .where(FLASHCARD.ID.equal(id))
+            .fetchOne()
+            ?.into(Flashcard::class.java)
+            ?.let { FlashcardEntity(it.id, it.front, it.back, it.deckId) }
 
-    override fun findAllByDeckId(deckId: Int): List<FlashcardEntity> =
+    override fun findAllByDeckId(deckId: Long): List<FlashcardEntity> =
         ctx.select().from(FLASHCARD)
             .where(FLASHCARD.DECK_ID.equal(deckId))
             .fetch()

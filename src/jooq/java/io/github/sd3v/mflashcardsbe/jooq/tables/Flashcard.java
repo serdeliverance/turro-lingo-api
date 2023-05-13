@@ -75,7 +75,7 @@ public class Flashcard extends TableImpl<FlashcardRecord> {
     /**
      * The column <code>public.flashcard.deck_id</code>.
      */
-    public final TableField<FlashcardRecord, Integer> DECK_ID = createField(DSL.name("deck_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<FlashcardRecord, Long> DECK_ID = createField(DSL.name("deck_id"), SQLDataType.BIGINT.nullable(false), this, "");
 
     private Flashcard(Name alias, Table<FlashcardRecord> aliased) {
         this(alias, aliased, null);
@@ -186,14 +186,14 @@ public class Flashcard extends TableImpl<FlashcardRecord> {
     // -------------------------------------------------------------------------
 
     @Override
-    public Row5<Long, String, String, String, Integer> fieldsRow() {
+    public Row5<Long, String, String, String, Long> fieldsRow() {
         return (Row5) super.fieldsRow();
     }
 
     /**
      * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
      */
-    public <U> SelectField<U> mapping(Function5<? super Long, ? super String, ? super String, ? super String, ? super Integer, ? extends U> from) {
+    public <U> SelectField<U> mapping(Function5<? super Long, ? super String, ? super String, ? super String, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
@@ -201,7 +201,7 @@ public class Flashcard extends TableImpl<FlashcardRecord> {
      * Convenience mapping calling {@link SelectField#convertFrom(Class,
      * Function)}.
      */
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super String, ? super String, ? super String, ? super Integer, ? extends U> from) {
+    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super String, ? super String, ? super String, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }
 }

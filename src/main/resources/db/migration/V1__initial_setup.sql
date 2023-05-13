@@ -16,6 +16,6 @@ CREATE TABLE IF NOT EXISTS "flashcard" (
     "front" VARCHAR(255) NOT NULL,
     "back" VARCHAR(255) NOT NULL,
     "example" VARCHAR(255),
-    "deck_id" INTEGER NOT NULL,
+    "deck_id" BIGINT NOT NULL,
     CONSTRAINT fk_deck_id FOREIGN KEY(deck_id) REFERENCES "deck"(id)
 );
