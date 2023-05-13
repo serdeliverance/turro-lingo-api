@@ -8,5 +8,5 @@ public record CreateDeck(
     String description,
     String type,
     String language,
-    List<Flashcard> flashcards,
+    List<CreateFlashcard> flashcards,
     List<String> tags) {}

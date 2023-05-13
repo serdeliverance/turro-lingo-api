@@ -8,6 +8,7 @@ import io.github.sd3v.mflashcardsbe.api.exceptions.EntityNotFoundException
 import io.github.sd3v.mflashcardsbe.api.helpers.DeckMapper
 import io.github.sd3v.mflashcardsbe.domain.Deck
 import io.github.sd3v.mflashcardsbe.service.DeckService
+import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -19,9 +20,12 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/decks")
 class DeckController(val deckService: DeckService) {
+
+    private val logger = LoggerFactory.getLogger(DeckController::class.java)
+
     @GetMapping("/{id}")
-    fun getById(@PathVariable id: String?): DeckDto? {
-        // TODO implement
+    fun getById(@PathVariable id: Long): DeckDto? {
+        logger.info("Getting deck with id: {}", id)
         return null
     }
 
@@ -41,8 +45,10 @@ class DeckController(val deckService: DeckService) {
             )
     }
 
+    // TODO remove "/", keep without it and update createDeck script
     @PostMapping("/")
     fun create(@RequestBody createDeckDto: CreateDeckDto): DeckDto {
+        logger.info("Creating deck...")
         val createdDeck = deckService.create(DeckMapper.toDomain(createDeckDto))
         return DeckMapper.toDto(createdDeck)
     }

@@ -4,10 +4,13 @@ import io.github.sd3v.mflashcardsbe.domain.CreateDeck
 import io.github.sd3v.mflashcardsbe.jooq.Tables.DECK
 import io.github.sd3v.mflashcardsbe.repository.entity.DeckEntity
 import org.jooq.DSLContext
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Repository
 
 @Repository
 class DeckRepositoryImpl(val create: DSLContext) : DeckRepository {
+
+    private val logger = LoggerFactory.getLogger(DeckRepositoryImpl::class.java)
 
     override fun findFirstBySlug(slug: String): DeckEntity? {
         TODO("Not yet implemented")
@@ -19,6 +22,8 @@ class DeckRepositoryImpl(val create: DSLContext) : DeckRepository {
 
     // TODO refactor this method (it could be cleaner)
     override fun save(deck: CreateDeck): DeckEntity {
+        logger.info("Saving deck: {}", deck)
+
         val newDeck = create.newRecord(DECK)
         newDeck.slug = deck.slug
         newDeck.name = deck.name
