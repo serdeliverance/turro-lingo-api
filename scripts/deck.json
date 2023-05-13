@@ -1,0 +1,13 @@
+{
+  "name": "example-temp",
+  "slug": "example-temp",
+  "deckType": "phrases",
+  "lang": "de_DE",
+  "tags": [],
+  "flashcards": [
+    {
+      "front": "die Familie",
+      "back": "family"
+    }
+  ]
+}
