@@ -28,7 +28,8 @@ public class DeckService {
   }
 
   public Optional<Deck> getBySlug(String slug) {
-    return deckRepository.findFirstBySlug(slug).map(DeckMapper::toDomain);
+    var deck = deckRepository.findFirstBySlug(slug);
+    return Optional.ofNullable(deck).map(DeckMapper::toDomain);
   }
 
   public void addFlashcards(Integer deckId, NewFlashcardDto newFlashcardDto) {
