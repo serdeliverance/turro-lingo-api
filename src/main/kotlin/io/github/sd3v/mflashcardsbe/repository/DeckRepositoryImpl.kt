@@ -39,4 +39,9 @@ class DeckRepositoryImpl(val create: DSLContext) : DeckRepository {
             DeckEntity(r.id, r.name, r.slug, r.description, r.type, r.language, r.tags)
         }!!
     }
+
+    override fun findById(id: Long): DeckEntity? =
+        create.select().from(DECK)
+            .where(DECK.ID.eq(id))
+            .fetchOne()?.into(DECK)?.let { r -> DeckEntity(r.id, r.name, r.slug, r.description, r.type, r.language, r.tags) }
 }

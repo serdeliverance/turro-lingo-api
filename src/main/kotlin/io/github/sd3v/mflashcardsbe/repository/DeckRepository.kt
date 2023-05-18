@@ -9,4 +9,5 @@ interface DeckRepository {
     fun findAll(): List<DeckEntity>
 
     fun save(deck: CreateDeck): DeckEntity
+    fun findById(id: Long): DeckEntity?
 }

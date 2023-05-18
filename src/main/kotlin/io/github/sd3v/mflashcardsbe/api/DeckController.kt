@@ -25,12 +25,21 @@ class DeckController(val deckService: DeckService) {
     @GetMapping("/{id}")
     fun getById(@PathVariable id: Long): DeckDto? {
         logger.info("Getting deck with id: {}", id)
-        return null
+        return deckService.getById(id)?.let { deck ->
+            DeckMapper.toDto(
+                deck,
+            )
+        } ?: throw
+            EntityNotFoundException(
+                "deck",
+                "id",
+                id.toString(),
+            )
     }
 
     @GetMapping("/slug/{slug}")
-    fun getBySlug(@PathVariable slug: String): DeckDto? {
-        return deckService
+    fun getBySlug(@PathVariable slug: String): DeckDto? =
+        deckService
             .getBySlug(slug)?.let { deck ->
             DeckMapper.toDto(
                 deck,
@@ -41,7 +50,6 @@ class DeckController(val deckService: DeckService) {
                 "slug",
                 slug,
             )
-    }
 
     // TODO remove "/", keep without it and update createDeck script
     @PostMapping("/")

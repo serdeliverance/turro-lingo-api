@@ -47,4 +47,7 @@ class DeckService(val deckRepository: DeckRepository, val flashcardRepository: F
         val tags = entity.tags.split(",").map { it.trim() }
         return Deck(entity.id, entity.name, entity.slug, entity.description, entity.type, entity.language, flashcards, tags)
     }
+
+    fun getById(id: Long): Deck? =
+        deckRepository.findById(id)?.let { buildDeckWithFlashcards(it) }
 }
