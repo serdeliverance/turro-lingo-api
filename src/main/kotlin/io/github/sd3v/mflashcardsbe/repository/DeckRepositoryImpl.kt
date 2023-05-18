@@ -12,12 +12,10 @@ class DeckRepositoryImpl(val create: DSLContext) : DeckRepository {
 
     private val logger = LoggerFactory.getLogger(DeckRepositoryImpl::class.java)
 
-    override fun findFirstBySlug(slug: String): DeckEntity? {
-        return create.select().from(DECK).where(DECK.SLUG.eq(slug)).fetchOne()?.let {
-                r ->
-            DeckEntity(r.id, r.name, r.slug, r.description, r.type, r.language, r.tags)
-        }
-    }
+    override fun findFirstBySlug(slug: String): DeckEntity? =
+        create.select().from(DECK)
+            .where(DECK.SLUG.eq(slug))
+            .fetchOne()?.into(DECK)?.let { r -> DeckEntity(r.id, r.name, r.slug, r.description, r.type, r.language, r.tags) }
 
     override fun findAll(): List<DeckEntity> {
         TODO("Not yet implemented")

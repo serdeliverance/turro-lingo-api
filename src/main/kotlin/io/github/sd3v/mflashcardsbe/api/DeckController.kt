@@ -6,7 +6,6 @@ import io.github.sd3v.mflashcardsbe.api.dto.FlashcardDto
 import io.github.sd3v.mflashcardsbe.api.dto.NewFlashcardDto
 import io.github.sd3v.mflashcardsbe.api.exceptions.EntityNotFoundException
 import io.github.sd3v.mflashcardsbe.api.helpers.DeckMapper
-import io.github.sd3v.mflashcardsbe.domain.Deck
 import io.github.sd3v.mflashcardsbe.service.DeckService
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.DeleteMapping
@@ -32,12 +31,11 @@ class DeckController(val deckService: DeckService) {
     @GetMapping("/slug/{slug}")
     fun getBySlug(@PathVariable slug: String): DeckDto? {
         return deckService
-            .getBySlug(slug)
-            .let { deck: Deck? ->
-                DeckMapper.toDto(
-                    deck,
-                )
-            } ?: throw
+            .getBySlug(slug)?.let { deck ->
+            DeckMapper.toDto(
+                deck,
+            )
+        } ?: throw
             EntityNotFoundException(
                 "deck",
                 "slug",

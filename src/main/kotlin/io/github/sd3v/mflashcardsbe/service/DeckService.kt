@@ -8,11 +8,14 @@ import io.github.sd3v.mflashcardsbe.repository.DeckRepository
 import io.github.sd3v.mflashcardsbe.repository.FlashcardRepository
 import io.github.sd3v.mflashcardsbe.repository.entity.DeckEntity
 import io.github.sd3v.mflashcardsbe.service.helpers.DeckMapper.toDomain
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 @Service
 class DeckService(val deckRepository: DeckRepository, val flashcardRepository: FlashcardRepository) {
+
+    private val logger = LoggerFactory.getLogger(DeckService::class.java)
 
     fun getAll(): List<Deck> {
         return deckRepository.findAll().map { buildDeckWithFlashcards(it) }
@@ -39,6 +42,7 @@ class DeckService(val deckRepository: DeckRepository, val flashcardRepository: F
     }
 
     private fun buildDeckWithFlashcards(entity: DeckEntity): Deck {
+        logger.info("building entity: $entity")
         val flashcards = flashcardRepository.findAllByDeckId(entity.id).map { Flashcard(it.id, it.front, it.back) }
         val tags = entity.tags.split(",").map { it.trim() }
         return Deck(entity.id, entity.name, entity.slug, entity.description, entity.type, entity.language, flashcards, tags)
