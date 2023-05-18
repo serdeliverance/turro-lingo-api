@@ -3,6 +3,7 @@ package io.github.sd3v.mflashcardsbe.api.helpers;
 import io.github.sd3v.mflashcardsbe.api.dto.CreateDeckDto;
 import io.github.sd3v.mflashcardsbe.api.dto.DeckDto;
 import io.github.sd3v.mflashcardsbe.domain.CreateDeck;
+import io.github.sd3v.mflashcardsbe.domain.CreateFlashcard;
 import io.github.sd3v.mflashcardsbe.domain.Deck;
 
 public class DeckMapper {
@@ -14,7 +15,7 @@ public class DeckMapper {
         dto.description(),
         dto.type(),
         dto.language(),
-        dto.flashcards().stream().map(FlashcardMapper::toDomain).toList(),
+        dto.flashcards().stream().map(f -> new CreateFlashcard(f.front(), f.back())).toList(),
         dto.tags());
   }
 

@@ -1,13 +1,13 @@
 # m-flashcards
 
-Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Kotlin`, `Spring Boot`, `Nextjs`, `Typescript` and related technologies.
+Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Java`, `Spring Boot`, `Nextjs`, `Typescript` and related technologies.
 
 ## Stack
 
 - `Nextjs + Typescript`
-- `Kotlin + Spring`
+- `Kotlin + Spring Boot`
 - `Cypress`
-- `Mongo`
+- `Postgres`
 - `Docker`
 
 ## Requirements

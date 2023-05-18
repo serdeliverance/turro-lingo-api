@@ -2,31 +2,36 @@ package io.github.sd3v.mflashcardsbe.service.helpers;
 
 import io.github.sd3v.mflashcardsbe.domain.CreateDeck;
 import io.github.sd3v.mflashcardsbe.domain.Deck;
+import io.github.sd3v.mflashcardsbe.domain.Flashcard;
 import io.github.sd3v.mflashcardsbe.repository.entity.DeckEntity;
+import io.github.sd3v.mflashcardsbe.repository.entity.FlashcardEntity;
+import java.util.Arrays;
+import java.util.List;
 
 public class DeckMapper {
 
   public static DeckEntity toEntity(CreateDeck deck) {
     return new DeckEntity(
-        null,
+        1, // TODO check
         deck.name(),
         deck.slug(),
         deck.description(),
         deck.type(),
         deck.language(),
-        deck.flashcards().stream().map(FlashcardMapper::toEntity).toList(),
-        deck.tags());
+        String.join(",", deck.tags()));
   }
 
-  public static Deck toDomain(DeckEntity entity) {
+  public static Deck toDomain(DeckEntity deck, List<FlashcardEntity> flashcards) {
     return new Deck(
-        entity.id(),
-        entity.name(),
-        entity.slug(),
-        entity.description(),
-        entity.type(),
-        entity.language(),
-        entity.flashcards().stream().map(FlashcardMapper::toDomain).toList(),
-        entity.tags());
+        deck.getId(),
+        deck.getName(),
+        deck.getSlug(),
+        deck.getDescription(),
+        deck.getType(),
+        deck.getLanguage(),
+        flashcards.stream()
+            .map(fce -> new Flashcard(fce.getId(), fce.getFront(), fce.getBack()))
+            .toList(),
+        Arrays.stream(deck.getTags().split(",")).toList());
   }
 }

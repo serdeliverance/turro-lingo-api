@@ -9,3 +9,15 @@ services:
     volumes:
       - ./docker/mongo/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
       - ./docker/mongo/data:/data/db
+
+  mfc-postgres:
+    image: postgres:latest
+    environment:
+      - "TZ=Europe/Amsterdam"
+      - "POSTGRES_USER=root"
+      - "POSTGRES_PASSWORD=root"
+      - "POSTGRES_DB=mfcdb"
+    volumes:
+      - ./docker/postgres/data:/var/lib/postgresql/data
+    ports:
+      - 45432:5432
