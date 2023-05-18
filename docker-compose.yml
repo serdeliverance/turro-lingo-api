@@ -17,5 +17,7 @@ services:
       - "POSTGRES_USER=root"
       - "POSTGRES_PASSWORD=root"
       - "POSTGRES_DB=mfcdb"
+    volumes:
+      - ./docker/postgres/data:/var/lib/postgresql/data
     ports:
       - 45432:5432
