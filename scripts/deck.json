@@ -1,8 +1,9 @@
 {
   "name": "example-temp",
   "slug": "example-temp",
-  "deckType": "phrases",
-  "lang": "de_DE",
+  "type": "phrases",
+  "description": "some important topic",
+  "language": "de_DE",
   "tags": [],
   "flashcards": [
     {

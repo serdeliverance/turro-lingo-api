@@ -28,6 +28,7 @@ class DeckRepositoryImpl(val create: DSLContext) : DeckRepository {
         newDeck.slug = deck.slug
         newDeck.name = deck.name
         newDeck.description = deck.description
+        newDeck.type = deck.type
         newDeck.language = deck.language
         newDeck.tags = deck.tags.joinToString(",")
         newDeck.language = deck.language
