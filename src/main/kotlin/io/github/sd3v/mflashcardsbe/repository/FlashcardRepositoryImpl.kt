@@ -21,12 +21,6 @@ class FlashcardRepositoryImpl(val create: DSLContext) : FlashcardRepository {
             ?.into(Flashcard::class.java)
             ?.let { FlashcardEntity(it.id, it.front, it.back, it.deckId) }
 
-    override fun findAllByDeckId(deckId: Long): List<FlashcardEntity> =
-        create.select().from(FLASHCARD)
-            .where(FLASHCARD.DECK_ID.equal(deckId))
-            .fetch()
-            .into(Flashcard::class.java)
-            .map { FlashcardEntity(it.id, it.front, it.back, it.deckId) }
 
     override fun save(flashcard: CreateFlashcard, deckId: Long): FlashcardEntity {
         logger.info("Saving flashcard: {}", flashcard)

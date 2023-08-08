@@ -12,7 +12,7 @@ public class DeckMapper {
 
   public static DeckEntity toEntity(CreateDeck deck) {
     return new DeckEntity(
-        1, // TODO check
+        1l, // TODO check
         deck.name(),
         deck.slug(),
         deck.description(),
@@ -23,15 +23,15 @@ public class DeckMapper {
 
   public static Deck toDomain(DeckEntity deck, List<FlashcardEntity> flashcards) {
     return new Deck(
-        deck.getId(),
-        deck.getName(),
-        deck.getSlug(),
-        deck.getDescription(),
-        deck.getType(),
-        deck.getLanguage(),
+        deck.id(),
+        deck.name(),
+        deck.slug(),
+        deck.description(),
+        deck.type(),
+        deck.language(),
         flashcards.stream()
-            .map(fce -> new Flashcard(fce.getId(), fce.getFront(), fce.getBack()))
+            .map(fce -> new Flashcard(fce.id(), fce.front(), fce.back()))
             .toList(),
-        Arrays.stream(deck.getTags().split(",")).toList());
+        Arrays.stream(deck.tags().split(",")).toList());
   }
 }
