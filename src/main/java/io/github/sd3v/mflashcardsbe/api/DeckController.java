@@ -18,36 +18,44 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class DeckController {
 
-    private final DeckService deckService;
+  private final DeckService deckService;
 
-    private static Logger logger = LoggerFactory.getLogger(DeckController.class);
+  private static Logger logger = LoggerFactory.getLogger(DeckController.class);
 
-    @GetMapping("/{id}")
-    public DeckDto getById(@PathVariable Long id) {
-        logger.info("Getting deck with id: {}", id);
-        return deckService.getById(id).map(DeckMapper::toDto).orElseThrow(() -> new EntityNotFoundException("deck", "id", id.toString()));
-    }
+  @GetMapping("/{id}")
+  public DeckDto getById(@PathVariable Long id) {
+    logger.info("Getting deck with id: {}", id);
+    return deckService
+        .getById(id)
+        .map(DeckMapper::toDto)
+        .orElseThrow(() -> new EntityNotFoundException("deck", "id", id.toString()));
+  }
 
-    @GetMapping("/slug/{slug}")
-    public DeckDto getBySlug(@PathVariable String slug) {
-        return deckService.getBySlug(slug).map(DeckMapper::toDto).orElseThrow(() -> new EntityNotFoundException("deck", "slug", slug));
-    }
+  @GetMapping("/slug/{slug}")
+  public DeckDto getBySlug(@PathVariable String slug) {
+    return deckService
+        .getBySlug(slug)
+        .map(DeckMapper::toDto)
+        .orElseThrow(() -> new EntityNotFoundException("deck", "slug", slug));
+  }
 
-    // TODO remove "/", keep without it and update createDeck script
-    @PostMapping("/")
-    public DeckDto create(@RequestBody CreateDeckDto createDeckDto) {
-        logger.info("Creating deck...");
-        Deck createdDeck = deckService.create(DeckMapper.toDomain(createDeckDto));
-        return DeckMapper.toDto(createdDeck);
-    }
+  // TODO remove "/", keep without it and update createDeck script
+  @PostMapping("/")
+  public DeckDto create(@RequestBody CreateDeckDto createDeckDto) {
+    logger.info("Creating deck...");
+    Deck createdDeck = deckService.create(DeckMapper.toDomain(createDeckDto));
+    return DeckMapper.toDto(createdDeck);
+  }
 
-    @PostMapping("/{id}/flashcards")
-    public void addFlashcards(@PathVariable("id") Long deckId, @RequestBody NewFlashcardDto newFlashcardDto) {
-        deckService.addFlashcards(deckId, newFlashcardDto);
-    }
+  @PostMapping("/{id}/flashcards")
+  public void addFlashcards(
+      @PathVariable("id") Long deckId, @RequestBody NewFlashcardDto newFlashcardDto) {
+    deckService.addFlashcards(deckId, newFlashcardDto);
+  }
 
-    @DeleteMapping("/{deckId}/flashcards/{flashcardId}")
-    public FlashcardDto deleteFlashcards(@PathVariable("deckId") int deckId, @PathVariable("flashcardId") String flashcardId) {
-        return null;
-    }
+  @DeleteMapping("/{deckId}/flashcards/{flashcardId}")
+  public FlashcardDto deleteFlashcards(
+      @PathVariable("deckId") int deckId, @PathVariable("flashcardId") String flashcardId) {
+    return null;
+  }
 }
