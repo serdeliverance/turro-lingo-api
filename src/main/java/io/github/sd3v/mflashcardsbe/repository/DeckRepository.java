@@ -27,11 +27,9 @@ public class DeckRepository {
   }
 
   public Optional<DeckEntity> findFirstBySlug(String slug) {
-    //        return create.select().from(DECK)
-    //                .where(DECK.SLUG.eq(slug))
-    //                .fetchOne()?.into(DECK)?.let { r -> DeckEntity(r.id, r.name, r.slug,
-    // r.description, r.type, r.language, r.tags) }
-    return Optional.empty();
+    return create.select().from(DECK)
+            .where(DECK.SLUG.eq(slug))
+            .fetchOptionalInto(DeckEntity.class);
   }
 
   // TODO check the method parameter... maybe I should change it
