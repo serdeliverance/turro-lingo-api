@@ -21,12 +21,9 @@ public class DeckRepository {
   private static final Logger logger = LoggerFactory.getLogger(DeckRepository.class);
 
   public Optional<DeckEntity> findById(Long id) {
-    // TODO implement
-    //        create.select().from(DECK)
-    //                .where(DECK.ID.eq(id))
-    //                .fetchOne()?.into(DECK)?.let { r -> DeckEntity(r.id, r.name, r.slug,
-    // r.description, r.type, r.language, r.tags) }
-    return Optional.empty();
+            return create.select().from(DECK)
+                    .where(DECK.ID.eq(id))
+                    .fetchOptionalInto(DeckEntity.class);
   }
 
   public Optional<DeckEntity> findFirstBySlug(String slug) {
