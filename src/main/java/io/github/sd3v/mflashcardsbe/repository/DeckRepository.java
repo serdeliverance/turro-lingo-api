@@ -62,19 +62,6 @@ public class DeckRepository {
   }
 
   public List<DeckEntity> getAll() {
-    return create
-        .select()
-        .from(DECK)
-        .fetch()
-        .map(
-            r ->
-                new DeckEntity(
-                    r.get(DECK.ID),
-                    r.get(DECK.NAME),
-                    r.get(DECK.SLUG),
-                    r.get(DECK.DESCRIPTION),
-                    r.get(DECK.TYPE),
-                    r.get(DECK.LANGUAGE),
-                    r.get(DECK.TAGS)));
+    return create.select().from(DECK).fetch().into(DeckEntity.class);
   }
 }

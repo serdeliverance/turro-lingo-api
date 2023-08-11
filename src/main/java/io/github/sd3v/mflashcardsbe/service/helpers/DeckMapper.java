@@ -29,7 +29,9 @@ public class DeckMapper {
         deck.description(),
         deck.type(),
         deck.language(),
-        flashcards.stream().map(fce -> new Flashcard(fce.id(), fce.front(), fce.back())).toList(),
+        flashcards.stream()
+            .map(fce -> new Flashcard(fce.id(), fce.front(), fce.back(), fce.example()))
+            .toList(),
         Arrays.stream(deck.tags().split(",")).toList());
   }
 }

@@ -51,7 +51,10 @@ public class DeckService {
     logger.info("building entity: {}", entity);
     var flashcardList =
         flashcardRepository.findAllByDeckId(entity.id()).stream()
-            .map(flashcard -> new Flashcard(flashcard.id(), flashcard.front(), flashcard.back()))
+            .map(
+                flashcard ->
+                    new Flashcard(
+                        flashcard.id(), flashcard.front(), flashcard.back(), flashcard.example()))
             .toList();
     var tags = Arrays.stream(entity.tags().split(",")).map(String::trim).toList();
     return new Deck(
@@ -65,7 +68,6 @@ public class DeckService {
         tags);
   }
 
-  // TODO implement
   public List<Deck> getAll() {
     return deckRepository.getAll().stream().map(this::buildDeckWithFlashcards).toList();
   }

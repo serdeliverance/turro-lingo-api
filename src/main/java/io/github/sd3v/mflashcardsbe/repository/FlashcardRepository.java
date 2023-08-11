@@ -1,5 +1,7 @@
 package io.github.sd3v.mflashcardsbe.repository;
 
+import static io.github.sd3v.mflashcardsbe.jooq.Tables.FLASHCARD;
+
 import io.github.sd3v.mflashcardsbe.domain.CreateFlashcard;
 import io.github.sd3v.mflashcardsbe.repository.entity.FlashcardEntity;
 import java.util.List;
@@ -14,7 +16,7 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 public class FlashcardRepository {
 
-  private final DSLContext context;
+  private final DSLContext create;
 
   private static final Logger logger = LoggerFactory.getLogger(FlashcardRepository.class);
 
@@ -27,14 +29,13 @@ public class FlashcardRepository {
     return Optional.empty();
   }
 
-  // TODO implement
-  public List<FlashcardEntity> findAllByDeckId(Long id) {
-    //        create.select().from(FLASHCARD)
-    //                .where(FLASHCARD.DECK_ID.equal(deckId))
-    //                .fetch()
-    //                .into(Flashcard::class.java)
-    //            .map { FlashcardEntity(it.id, it.front, it.back, it.deckId) }
-    return null;
+  public List<FlashcardEntity> findAllByDeckId(Long deckId) {
+    return create
+        .select()
+        .from(FLASHCARD)
+        .where(FLASHCARD.DECK_ID.equal(deckId))
+        .fetch()
+        .into(FlashcardEntity.class);
   }
 
   // TODO implement

@@ -18,7 +18,7 @@ public class MaintenanceService {
             deck -> {
               var flashcards =
                   deck.flashcards().stream()
-                      .map(f -> new Flashcard(1l, f.front(), f.back()))
+                      .map(f -> new Flashcard(1l, f.front(), f.back(), f.example()))
                       .toList();
               return new Deck(
                   deck.id(),
