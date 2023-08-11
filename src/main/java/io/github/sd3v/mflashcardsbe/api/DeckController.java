@@ -8,6 +8,7 @@ import io.github.sd3v.mflashcardsbe.api.exceptions.EntityNotFoundException;
 import io.github.sd3v.mflashcardsbe.api.helpers.DeckMapper;
 import io.github.sd3v.mflashcardsbe.domain.Deck;
 import io.github.sd3v.mflashcardsbe.service.DeckService;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,11 @@ public class DeckController {
   private final DeckService deckService;
 
   private static Logger logger = LoggerFactory.getLogger(DeckController.class);
+
+  @GetMapping
+  public List<DeckDto> getAll() {
+    return deckService.getAll().stream().map(DeckMapper::toDto).toList();
+  }
 
   @GetMapping("/{id}")
   public DeckDto getById(@PathVariable Long id) {
