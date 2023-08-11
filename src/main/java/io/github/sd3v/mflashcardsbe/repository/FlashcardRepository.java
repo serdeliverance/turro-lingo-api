@@ -40,19 +40,18 @@ public class FlashcardRepository {
 
   // TODO implement
   // TODO check CreateFlashCard type
-  public FlashcardEntity save(CreateFlashcard flashcard, Long id) {
-    //        logger.info("Saving flashcard: {}", flashcard)
-    //
-    //        val newFlashcard = create.newRecord(Tables.FLASHCARD)
-    //        newFlashcard.front = flashcard.front
-    //        newFlashcard.back = flashcard.back
-    //        newFlashcard.deckId = deckId
-    //        // TODO return just id (to optimize data transfer) and create DeckEntity with the
-    // values we already have
-    //        return create.insertInto(Tables.FLASHCARD).set(newFlashcard).returning().fetchOne {
-    //            r ->
-    //                    FlashcardEntity(r.id, r.front, r.back, r.deckId)
-    //        }!!
-    return null;
+  public FlashcardEntity save(CreateFlashcard flashcard, Long deckId) {
+    logger.info("Saving flashcard: {}", flashcard);
+
+    var newFlashcard = create.newRecord(FLASHCARD);
+    newFlashcard.setFront(flashcard.front());
+    newFlashcard.setBack(flashcard.back());
+    newFlashcard.setDeckId(deckId);
+    return create
+        .insertInto(FLASHCARD)
+        .set(newFlashcard)
+        .returning()
+        .fetchOne()
+        .into(FlashcardEntity.class);
   }
 }

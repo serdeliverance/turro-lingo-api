@@ -9,8 +9,9 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(EntityNotFoundException.class)
-    public final ResponseEntity<ErrorMessage> handleEntityNotFound(EntityNotFoundException exception) {
-        return new ResponseEntity<>(new ErrorMessage(exception.getMessage()), HttpStatus.NOT_FOUND);
-    }
+  @ExceptionHandler(EntityNotFoundException.class)
+  public final ResponseEntity<ErrorMessage> handleEntityNotFound(
+      EntityNotFoundException exception) {
+    return new ResponseEntity<>(new ErrorMessage(exception.getMessage()), HttpStatus.NOT_FOUND);
+  }
 }

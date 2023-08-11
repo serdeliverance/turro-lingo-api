@@ -45,8 +45,7 @@ public class DeckController {
         .orElseThrow(() -> new EntityNotFoundException("deck", "slug", slug));
   }
 
-  // TODO remove "/", keep without it and update createDeck script
-  @PostMapping("/")
+  @PostMapping
   public DeckDto create(@RequestBody CreateDeckDto createDeckDto) {
     logger.info("Creating deck...");
     Deck createdDeck = deckService.create(DeckMapper.toDomain(createDeckDto));

@@ -21,39 +21,27 @@ public class DeckRepository {
   private static final Logger logger = LoggerFactory.getLogger(DeckRepository.class);
 
   public Optional<DeckEntity> findById(Long id) {
-            return create.select().from(DECK)
-                    .where(DECK.ID.eq(id))
-                    .fetchOptionalInto(DeckEntity.class);
+    return create.select().from(DECK).where(DECK.ID.eq(id)).fetchOptionalInto(DeckEntity.class);
   }
 
   public Optional<DeckEntity> findFirstBySlug(String slug) {
-    return create.select().from(DECK)
-            .where(DECK.SLUG.eq(slug))
-            .fetchOptionalInto(DeckEntity.class);
+    return create.select().from(DECK).where(DECK.SLUG.eq(slug)).fetchOptionalInto(DeckEntity.class);
   }
 
   // TODO check the method parameter... maybe I should change it
   // TODO refactor this method (it could be cleaner)
   public DeckEntity save(CreateDeck createDeck) {
-    //        logger.info("Saving deck: {}", deck)
-    //
-    //        val newDeck = create.newRecord(DECK)
-    //        newDeck.slug = deck.slug
-    //        newDeck.name = deck.name
-    //        newDeck.description = deck.description
-    //        newDeck.type = deck.type
-    //        newDeck.language = deck.language
-    //        newDeck.tags = deck.tags.joinToString(",")
-    //        newDeck.language = deck.language
-    //        // TODO return just id (to optimize data transfer) and create DeckEntity with the
-    // values we already have
-    //        return create.insertInto(DECK).set(newDeck).returning().fetchOne {
-    //            r ->
-    //                    DeckEntity(r.id, r.name, r.slug, r.description, r.type, r.language,
-    // r.tags)
-    //        }!!
+    logger.info("Saving deck: {}", createDeck);
 
-    return null;
+    var newDeck = create.newRecord(DECK);
+    newDeck.setSlug(createDeck.slug());
+    newDeck.setName(createDeck.name());
+    newDeck.setDescription(createDeck.description());
+    newDeck.setType(createDeck.type());
+    newDeck.setLanguage(createDeck.language());
+    newDeck.setTags(String.join(",", createDeck.tags()));
+    newDeck.setLanguage(createDeck.language());
+    return create.insertInto(DECK).set(newDeck).returning().fetchOne().into(DeckEntity.class);
   }
 
   public List<DeckEntity> getAll() {
