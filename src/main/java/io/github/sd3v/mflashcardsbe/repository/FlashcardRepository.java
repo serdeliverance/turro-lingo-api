@@ -54,4 +54,12 @@ public class FlashcardRepository {
         .fetchOne()
         .into(FlashcardEntity.class);
   }
+
+  public Optional<FlashcardEntity> findByDeckIdAndFront(Long deckId, String front) {
+    return create
+        .select()
+        .from(FLASHCARD)
+        .where(FLASHCARD.DECK_ID.eq(deckId).and(FLASHCARD.FRONT.eq(front)))
+        .fetchOptionalInto(FlashcardEntity.class);
+  }
 }

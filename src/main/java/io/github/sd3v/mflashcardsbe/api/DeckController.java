@@ -53,9 +53,9 @@ public class DeckController {
   }
 
   @PostMapping("/{id}/flashcards")
-  public void addFlashcards(
+  public void addFlashcard(
       @PathVariable("id") Long deckId, @RequestBody NewFlashcardDto newFlashcardDto) {
-    deckService.addFlashcards(deckId, newFlashcardDto);
+    deckService.addFlashcard(deckId, newFlashcardDto);
   }
 
   @DeleteMapping("/{deckId}/flashcards/{flashcardId}")

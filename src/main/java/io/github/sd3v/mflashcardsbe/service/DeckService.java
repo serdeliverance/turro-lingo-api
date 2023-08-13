@@ -45,7 +45,9 @@ public class DeckService {
   }
 
   // TODO implement
-  public void addFlashcards(Long deckId, NewFlashcardDto newFlashcardDto) {}
+  public void addFlashcard(Long deckId, NewFlashcardDto newFlashcardDto) {
+    var alreadyExists = flashcardRepository.findByDeckIdAndFront(deckId, newFlashcardDto.front());
+  }
 
   private Deck buildDeckWithFlashcards(DeckEntity entity) {
     logger.info("building entity: {}", entity);
