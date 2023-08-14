@@ -5,7 +5,7 @@ Flashcards for learning languages. This project born from a real need and also c
 ## Stack
 
 - `Nextjs + Typescript`
-- `Kotlin + Spring Boot`
+- `Java + Spring Boot`
 - `Cypress`
 - `Postgres`
 - `Docker`
