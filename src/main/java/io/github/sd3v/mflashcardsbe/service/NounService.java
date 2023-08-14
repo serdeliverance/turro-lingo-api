@@ -1,0 +1,19 @@
+package io.github.sd3v.mflashcardsbe.service;
+
+import io.github.sd3v.mflashcardsbe.domain.Noun;
+import io.github.sd3v.mflashcardsbe.repository.NounRepository;
+import io.github.sd3v.mflashcardsbe.service.helpers.NounMapper;
+import java.util.Optional;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class NounService {
+
+  private final NounRepository nounRepository;
+
+  public Optional<Noun> getById(Long id) {
+    return nounRepository.findById(id).map(NounMapper::toDomain);
+  }
+}
