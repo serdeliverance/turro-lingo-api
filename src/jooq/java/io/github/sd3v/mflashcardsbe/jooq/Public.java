@@ -7,6 +7,7 @@ package io.github.sd3v.mflashcardsbe.jooq;
 import io.github.sd3v.mflashcardsbe.jooq.tables.Deck;
 import io.github.sd3v.mflashcardsbe.jooq.tables.Flashcard;
 import io.github.sd3v.mflashcardsbe.jooq.tables.FlywaySchemaHistory;
+import io.github.sd3v.mflashcardsbe.jooq.tables.Noun;
 
 import java.util.Arrays;
 import java.util.List;
@@ -45,6 +46,11 @@ public class Public extends SchemaImpl {
     public final FlywaySchemaHistory FLYWAY_SCHEMA_HISTORY = FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY;
 
     /**
+     * The table <code>public.noun</code>.
+     */
+    public final Noun NOUN = Noun.NOUN;
+
+    /**
      * No further instances allowed
      */
     private Public() {
@@ -62,7 +68,8 @@ public class Public extends SchemaImpl {
         return Arrays.asList(
             Deck.DECK,
             Flashcard.FLASHCARD,
-            FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY
+            FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY,
+            Noun.NOUN
         );
     }
 }

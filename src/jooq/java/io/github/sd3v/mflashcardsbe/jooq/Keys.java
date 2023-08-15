@@ -7,9 +7,11 @@ package io.github.sd3v.mflashcardsbe.jooq;
 import io.github.sd3v.mflashcardsbe.jooq.tables.Deck;
 import io.github.sd3v.mflashcardsbe.jooq.tables.Flashcard;
 import io.github.sd3v.mflashcardsbe.jooq.tables.FlywaySchemaHistory;
+import io.github.sd3v.mflashcardsbe.jooq.tables.Noun;
 import io.github.sd3v.mflashcardsbe.jooq.tables.records.DeckRecord;
 import io.github.sd3v.mflashcardsbe.jooq.tables.records.FlashcardRecord;
 import io.github.sd3v.mflashcardsbe.jooq.tables.records.FlywaySchemaHistoryRecord;
+import io.github.sd3v.mflashcardsbe.jooq.tables.records.NounRecord;
 
 import org.jooq.ForeignKey;
 import org.jooq.TableField;
@@ -32,6 +34,7 @@ public class Keys {
     public static final UniqueKey<DeckRecord> DECK_PKEY = Internal.createUniqueKey(Deck.DECK, DSL.name("deck_pkey"), new TableField[] { Deck.DECK.ID }, true);
     public static final UniqueKey<FlashcardRecord> FLASHCARD_PKEY = Internal.createUniqueKey(Flashcard.FLASHCARD, DSL.name("flashcard_pkey"), new TableField[] { Flashcard.FLASHCARD.ID }, true);
     public static final UniqueKey<FlywaySchemaHistoryRecord> FLYWAY_SCHEMA_HISTORY_PK = Internal.createUniqueKey(FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY, DSL.name("flyway_schema_history_pk"), new TableField[] { FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY.INSTALLED_RANK }, true);
+    public static final UniqueKey<NounRecord> NOUN_PKEY = Internal.createUniqueKey(Noun.NOUN, DSL.name("noun_pkey"), new TableField[] { Noun.NOUN.ID }, true);
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
