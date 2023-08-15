@@ -1,5 +1,7 @@
 package io.github.sd3v.mflashcardsbe.api;
 
+import static io.github.sd3v.mflashcardsbe.api.helpers.NounsMapper.toDomain;
+
 import io.github.sd3v.mflashcardsbe.api.dto.CreateNounDto;
 import io.github.sd3v.mflashcardsbe.api.dto.NounDto;
 import io.github.sd3v.mflashcardsbe.api.exceptions.EntityNotFoundException;
@@ -38,6 +40,7 @@ public class NounsController {
 
   @PostMapping
   public NounDto create(@RequestBody CreateNounDto createNounDto) {
-    return null;
+    var createdNoun = nounService.create(toDomain(createNounDto));
+    return NounsMapper.toDto(createdNoun);
   }
 }
