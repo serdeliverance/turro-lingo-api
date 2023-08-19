@@ -5,6 +5,7 @@ import static io.github.sd3v.mflashcardsbe.repository.common.TagParser.tagsAsStr
 
 import io.github.sd3v.mflashcardsbe.domain.CreateNoun;
 import io.github.sd3v.mflashcardsbe.repository.entity.NounEntity;
+import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,6 +18,10 @@ import org.springframework.stereotype.Repository;
 public class NounRepository {
 
   private final DSLContext create;
+
+  public List<NounEntity> findAll() {
+    return create.select().from(NOUN).fetchInto(NounEntity.class);
+  }
 
   public Optional<NounEntity> findById(Long id) {
     return create.select().from(NOUN).where(NOUN.ID.eq(id)).fetchOptionalInto(NounEntity.class);
