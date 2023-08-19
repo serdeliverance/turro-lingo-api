@@ -18,6 +18,11 @@ public class NounsController {
 
   private final NounService nounService;
 
+  @GetMapping
+  public List<NounDto> getAll() {
+    return nounService.getAll().stream().map(NounsMapper::toDto).toList();
+  }
+
   @GetMapping("/{id}")
   public NounDto getById(@PathVariable Long id) {
     return nounService
@@ -32,7 +37,9 @@ public class NounsController {
     return null;
   }
 
-  @GetMapping
+  // TODO (future) decide if it be better to rename it to / and remove getAll
+  // which is the best practice on this cases?
+  @GetMapping("/search")
   public List<NounDto> search(@RequestParam(required = false) String tag) {
     // TODO implement
     return List.of();
