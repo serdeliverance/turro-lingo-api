@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "d36c4925-c928-482b-942a-cf406bd99fe8",
+		"name": "MFC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21608069"
+	},
+	"item": [
+		{
+			"name": "menus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/menus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"menus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/decks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"decks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decks/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/decks/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"decks",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nouns/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/nouns/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"nouns",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decks/slug/slug",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/decks/slug/:slug",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"decks",
+						"slug",
+						":slug"
+					],
+					"variable": [
+						{
+							"key": "slug",
+							"value": "example-temp"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"example-2\",\n  \"slug\": \"example-2\",\n  \"type\": \"phrases\",\n  \"description\": \"some important topic\",\n  \"language\": \"de_DE\",\n  \"tags\": [\"essen\"],\n  \"flashcards\": [\n    {\n      \"front\": \"Ich hate gerne\",\n      \"back\": \"I would like to...\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/decks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"decks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nouns",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Keller\",\n    \"description\": \"Basement\",\n    \"article\": \"der\",\n    \"fullName\": \"der Keller\",\n    \"tags\": [\"wohnung\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/nouns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"nouns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nouns",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/nouns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"nouns"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
