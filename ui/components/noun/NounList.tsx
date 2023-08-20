@@ -1,13 +1,21 @@
-import {FC} from "react"
-import {useNouns} from "../../hooks/useNouns";
-import {Noun} from "./Noun";
+import { FC } from 'react'
+import { useNouns } from '../../hooks/useNouns'
+import { Noun } from './Noun'
 
 interface Props {}
 
 export const NounList: FC<Props> = () => {
-    const { nouns, loading } = useNouns()
+  const { nouns, loading } = useNouns()
 
-    return (
-        { nouns.map((noun) => (<Noun noun={noun} />))}
-    )
+  if (loading) {
+    return <h1>loading...</h1>
+  }
+
+  return (
+    <>
+      {nouns.map((noun) => (
+        <Noun noun={noun} />
+      ))}
+    </>
+  )
 }
