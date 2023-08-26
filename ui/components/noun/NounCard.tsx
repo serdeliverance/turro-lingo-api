@@ -7,14 +7,14 @@ interface Props {
 }
 
 const getColorByArticle = (article: string) => {
-    switch (article.toLowerCase()) {
-        case 'der':
-            return '#0872b9'
-        case 'die':
-            return '#ffb7ff'
-        default:
-            return '#a9a3a3'
-    }
+  switch (article.toLowerCase()) {
+    case 'der':
+      return '#0872b9'
+    case 'die':
+      return '#ffb7ff'
+    default:
+      return '#a9a3a3'
+  }
 }
 
 const BACK_COLOR = '#0c2020'
