@@ -1,8 +1,8 @@
 import { NextPage } from 'next'
-import { NounList } from '../../components/noun'
+import { NounCardList } from '../../components/noun'
 
 const NounsPage: NextPage = () => {
-  return <NounList />
+  return <NounCardList />
 }
 
 export default NounsPage

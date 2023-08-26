@@ -1,1 +1,1 @@
-export * from './NounList'
+export * from './NounCardList'

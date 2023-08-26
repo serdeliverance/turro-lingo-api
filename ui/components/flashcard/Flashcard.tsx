@@ -4,26 +4,27 @@ import { IFlashCard } from '../../interfaces'
 
 interface Props {
   flashCard: IFlashCard
+  frontColor?: string
+  backColor?: string
 }
 
-export const Flashcard: FC<Props> = ({ flashCard }) => {
+export const Flashcard: FC<Props> = ({ flashCard, frontColor, backColor }) => {
   const theme = useTheme()
   const [isFlipped, setIsFlipped] = useState(false)
 
-  const handleClick = () => {
-    setIsFlipped(true)
-    setTimeout(() => setIsFlipped(false), 10000)
-  }
+  const cardFrontColor = frontColor ?? theme.palette.primary.main
+  const cardBackColor = backColor ?? theme.palette.success.main
 
   return (
     <Grid item xs={6} sm={4}>
       <Paper
-        onClick={handleClick}
+        onClick={() => {
+          setIsFlipped(true)
+          setTimeout(() => setIsFlipped(false), 10000)
+        }}
         elevation={0}
         sx={{
-          bgcolor: !isFlipped
-            ? theme.palette.primary.main
-            : theme.palette.success.main,
+          bgcolor: !isFlipped ? cardFrontColor : cardBackColor,
           height: 60,
           borderRadius: '4px',
           color: theme.palette.primary.contrastText,
