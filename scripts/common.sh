@@ -38,6 +38,5 @@ function starting_frontend() {
 function starting_backend() {
     log_info "Starting backend..."
     cd $WORKSPACE
-    # TODO run in background and make frontend wait for it
     ./gradlew bootRun
 }
