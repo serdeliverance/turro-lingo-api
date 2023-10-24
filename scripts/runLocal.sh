@@ -17,8 +17,6 @@ echo "[${ME}] Starting up dockers, building frontend, building backend..."
 
 setup_dockers
 
-starting_backend
+starting_backend &
 
 starting_frontend
-
-log_info "finishing local setup..."

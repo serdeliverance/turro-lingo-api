@@ -22,10 +22,17 @@ function setup_dockers() {
 
 function starting_frontend() {
     log_info "Starting frontend..."
+    if [ -d ~/.nvm ]
+    then
+      source ~/.nvm/nvm.sh
+      cd $WORKSPACE/ui
+      nvm use
+      cd ..
+    fi
     cd ui
-    # TODO set nvm
+    nvm use
     yarn install
-    yarn dev &
+    yarn dev
 }
 
 function starting_backend() {
