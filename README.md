@@ -16,6 +16,13 @@ Flashcards for learning languages. This project born from a real need and also c
 - `Java 17`
 - `Docker`
 
+If you have [NVM](https://github.com/nvm-sh/nvm) and [SdkMan](https://sdkman.io/) installed, you can set the required `Node` and `JDK` versions by running the following commands
+
+```
+nvm use     # inside ui folder
+sdk env     # inside root folder
+```
+
 ## Data model
 
 So far the model is very simple:
