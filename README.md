@@ -45,17 +45,17 @@ To run both backend and frontend, simply run the following command.
 bash /scripts/runLocal.sh
 ```
 
-## Run (just) backend locally
-
-```bash
-./gradlew bootRun
-```
-
 It will run:
 
 - backend on <http://localhost:8080>
 - frontend on <http://localhost:7700>
 - postgres db on <http://localhost:45432>
+
+## Run (just) backend locally
+
+```bash
+./gradlew bootRun
+```
 
 ## Run (just) frontend locally
 
