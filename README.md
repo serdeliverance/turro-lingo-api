@@ -37,26 +37,40 @@ We have `decks` and `flashcards`. A `deck` is a `flashcard` set with some metada
 `type` indicates with type of `flashcard` the `deck` stores. `type` could be `phrase` or `vocabulary`. `vocabulary` flashcards use to have `example` value set.
 `flaschcard` domain class is self-explanatory.
 
-## Run backend locally
+## Run local
+
+To run both backend and frontend, simply run the following command.
 
 ```
+bash /scripts/runLocal.sh
+```
+
+## Run (just) backend locally
+
+```bash
 ./gradlew bootRun
 ```
 
-## Run frontend locally
+It will run:
 
-```
+- backend on <http://localhost:8080>
+- frontend on <http://localhost:7700>
+- postgres db on <http://localhost:45432>
+
+## Run (just) frontend locally
+
+```bash
 cd ui
 yarn dev
 ```
 
-It runs the frontend on localhost:3000
+It runs the frontend on localhost:7700
 
 ## Start DB
 
 run `docker-compose`:
 
-```
+```bash
 docker-compose up
 ```
 
