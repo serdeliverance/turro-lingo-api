@@ -4,9 +4,9 @@ import org.jooq.meta.jaxb.Property
 
 plugins {
     java
-    id("org.springframework.boot") version "3.1.2"
-    id("io.spring.dependency-management") version "1.1.0"
-    id("com.diffplug.spotless") version "6.16.0"
+    id("org.springframework.boot") version "3.2.2"
+    id("io.spring.dependency-management") version "1.1.4"
+    id("com.diffplug.spotless") version "6.25.0"
     id("nu.studer.jooq") version "5.2.1"
     id("org.flywaydb.flyway") version "9.8.1"
 }
@@ -15,8 +15,8 @@ group = "io.github.sd3v"
 version = "0.0.1-SNAPSHOT"
 
 configure<JavaPluginExtension> {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 val jooqSourceDir = "src/jooq/java"
@@ -59,7 +59,7 @@ spotless {
             },
         )
         removeUnusedImports()
-        googleJavaFormat("1.15.0")
+        googleJavaFormat("1.17.0")
     }
 }
 
