@@ -13,7 +13,7 @@ Flashcards for learning languages. This project born from a real need and also c
 ## Requirements
 
 - `Node v18.x` (you can use [NVM](https://github.com/nvm-sh/nvm) for setting the right version easily)
-- `Java 17`
+- `Java 21`
 - `Docker`
 
 If you have [NVM](https://github.com/nvm-sh/nvm) and [SdkMan](https://sdkman.io/) installed, you can set the required `Node` and `JDK` versions by running the following commands
