@@ -42,7 +42,7 @@ We have `decks` and `flashcards`. A `deck` is a `flashcard` set with some metada
 To run both backend and frontend, simply run the following command.
 
 ```
-bash /scripts/runLocal.sh
+bash scripts/runLocal.sh
 ```
 
 It will run:
