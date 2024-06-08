@@ -48,7 +48,7 @@ bash scripts/runLocal.sh
 It will run:
 
 - backend on <http://localhost:8080>
-- frontend on <http://localhost:7700>
+- frontend on <http://localhost:3000>
 - postgres db on <http://localhost:45432>
 
 ## Run (just) backend locally
@@ -64,7 +64,7 @@ cd ui
 yarn dev
 ```
 
-It runs the frontend on localhost:7700
+It runs the frontend on localhost:3000
 
 ## Start DB
 
