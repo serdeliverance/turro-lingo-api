@@ -1,1 +1,1 @@
-rootProject.name = "m-flashcards-be"
+rootProject.name = "turro-lingo-api"
