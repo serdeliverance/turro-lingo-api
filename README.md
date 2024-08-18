@@ -1,25 +1,21 @@
-# m-flashcards
+# Turro Lingo API
 
 Flashcards for learning languages. This project born from a real need and also comes in handy to dive deeper into `Java`, `Spring Boot`, `Nextjs`, `Typescript` and related technologies.
 
 ## Stack
 
-- `Nextjs + Typescript`
 - `Java + Spring Boot`
-- `Cypress`
 - `Postgres`
 - `Docker`
 
 ## Requirements
 
-- `Node v18.x` (you can use [NVM](https://github.com/nvm-sh/nvm) for setting the right version easily)
 - `Java 21`
 - `Docker`
 
-If you have [NVM](https://github.com/nvm-sh/nvm) and [SdkMan](https://sdkman.io/) installed, you can set the required `Node` and `JDK` versions by running the following commands
+If you have [SdkMan](https://sdkman.io/) installed, you can set the required `Node` and `JDK` versions by running the following command
 
 ```
-nvm use     # inside ui folder
 sdk env     # inside root folder
 ```
 
@@ -39,8 +35,6 @@ We have `decks` and `flashcards`. A `deck` is a `flashcard` set with some metada
 
 ## Run local
 
-To run both backend and frontend, simply run the following command.
-
 ```
 bash scripts/runLocal.sh
 ```
@@ -48,7 +42,6 @@ bash scripts/runLocal.sh
 It will run:
 
 - backend on <http://localhost:8080>
-- frontend on <http://localhost:3000>
 - postgres db on <http://localhost:45432>
 
 ## Run (just) backend locally
@@ -56,15 +49,6 @@ It will run:
 ```bash
 ./gradlew bootRun
 ```
-
-## Run (just) frontend locally
-
-```bash
-cd ui
-yarn dev
-```
-
-It runs the frontend on localhost:3000
 
 ## Start DB
 

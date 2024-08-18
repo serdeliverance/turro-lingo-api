@@ -20,21 +20,6 @@ function setup_dockers() {
     sleep 5
 }
 
-function starting_frontend() {
-    log_info "Starting frontend..."
-    if [ -d ~/.nvm ]
-    then
-      source ~/.nvm/nvm.sh
-      cd $WORKSPACE/ui
-      nvm use
-      cd ..
-    fi
-    cd ui
-    nvm use
-    yarn install
-    yarn dev
-}
-
 function starting_backend() {
     log_info "Starting backend..."
     cd $WORKSPACE

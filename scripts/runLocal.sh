@@ -13,10 +13,8 @@ echo "javaLocation: $(whereis java)"
 echo "nodeVer: $(node -v)"
 echo ----------------------------------------------
 
-echo "[${ME}] Starting up dockers, building frontend, building backend..."
+echo "[${ME}] Starting up dockers, building backend..."
 
 setup_dockers
 
-starting_backend &
-
-starting_frontend
+starting_backend
