@@ -1,3 +1,12 @@
 package io.github.sd3v.mflashcardsbe.service;
 
-public class WordExampleFinderService {}
+import java.util.List;
+import org.springframework.stereotype.Service;
+
+@Service
+public class WordExampleFinderService {
+  public List<String> findExamples(String word) {
+    // TODO implement
+    return List.of();
+  }
+}

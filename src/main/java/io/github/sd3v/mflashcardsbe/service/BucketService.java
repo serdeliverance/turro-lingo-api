@@ -15,7 +15,6 @@ public class BucketService {
   private TranslationService translationService;
   private WordExampleFinderService wordExampleFinderService;
 
-  // TODO research on which is the best time class to use here
   public Bucket create(
       int userId, Optional<String> description, List<String> words, ZonedDateTime createdAt) {
     var bucketItems = words.stream().limit(5).map(this::createBucketItem).toList();
@@ -24,13 +23,15 @@ public class BucketService {
       return null;
     }
 
-    bucketRepository.create(userId, description, bucketItems, createdAt);
-
-    return null;
+    return bucketRepository.create(userId, description, bucketItems, createdAt);
   }
 
   public BucketItem createBucketItem(String word) {
-    // TODO implement
-    return null;
+    var translation =
+        translationService
+            .findTranslation(word)
+            .orElseThrow(() -> new RuntimeException("Translation not found"));
+    var examples = wordExampleFinderService.findExamples(word);
+    return new BucketItem(word, translation, examples);
   }
 }
