@@ -2,15 +2,28 @@ package io.github.sd3v.mflashcardsbe.repository;
 
 import io.github.sd3v.mflashcardsbe.domain.Bucket;
 import io.github.sd3v.mflashcardsbe.domain.BucketItem;
+import java.time.ZonedDateTime;
+import java.util.List;
+import java.util.Optional;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.jooq.DSLContext;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
 @Repository
+@RequiredArgsConstructor
+@Slf4j
 public class BucketRepository {
-    public Bucket create(int userId, List<BucketItem> bucketItems, LocalDateTime createdAt) {
-        // TODO implement
-        return null;
-    }
+
+  private final DSLContext create;
+
+  public Bucket create(
+      int userId,
+      Optional<String> description,
+      List<BucketItem> bucketItems,
+      ZonedDateTime createdAt) {
+    // TODO implement
+    return null;
+  }
 }

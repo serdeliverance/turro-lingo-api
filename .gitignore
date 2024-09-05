@@ -1,4 +1,3 @@
-docker/mongo/data
 docker/postgres/data
 
 HELP.md

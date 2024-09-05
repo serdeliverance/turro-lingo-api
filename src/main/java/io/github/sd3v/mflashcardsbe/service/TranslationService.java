@@ -1,4 +1,3 @@
 package io.github.sd3v.mflashcardsbe.service;
 
-public class TranslationService {
-}
+public class TranslationService {}

@@ -1,22 +1,11 @@
 services:
-  flashcarddb:
-    image: mongo:5.0.0
-    ports:
-      - 27017:27017
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-    volumes:
-      - ./docker/mongo/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
-      - ./docker/mongo/data:/data/db
-
-  mfc-postgres:
+  tl-postgres:
     image: postgres:14-alpine
     environment:
       - "TZ=Europe/Amsterdam"
       - "POSTGRES_USER=root"
       - "POSTGRES_PASSWORD=root"
-      - "POSTGRES_DB=mfcdb"
+      - "POSTGRES_DB=tldb"
     volumes:
       - ./docker/postgres/data:/var/lib/postgresql/data
     ports:

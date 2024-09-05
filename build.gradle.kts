@@ -65,7 +65,7 @@ spotless {
 
 // TODO fix flyway migrations doesn't run on startup
 flyway {
-    url = "jdbc:postgresql://localhost:45432/mfcdb"
+    url = "jdbc:postgresql://localhost:45432/tldb"
     user = "root"
     password = "root"
     baselineVersion = "0"
@@ -84,7 +84,7 @@ jooq {
                 logging = org.jooq.meta.jaxb.Logging.WARN
                 jdbc.apply {
                     driver = "org.postgresql.Driver"
-                    url = "jdbc:postgresql://localhost:45432/mfcdb"
+                    url = "jdbc:postgresql://localhost:45432/tldb"
                     user = "root"
                     password = "root"
                     properties.add(Property().withKey("PAGE_SIZE").withValue("2048"))
